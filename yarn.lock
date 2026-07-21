@@ -2381,6 +2381,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lucide-react@^1.25.0:
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-1.25.0.tgz#c56fd69d3ac27c94714d8b9afda67e71db61e63c"
+  integrity sha512-/mdJTRbiwcLOQ1NZZK1amZF9rIZyvO18D6r9TngE6TG1NmqHgFuT4eE7Xrkm9UsXMbBJD1NlfwHVltCDWHrOTw==
+
 magic-string@^0.30.21:
   version "0.30.21"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.21.tgz#56763ec09a0fa8091df27879fd94d19078c00d91"
@@ -2673,6 +2678,11 @@ react-dom@19.2.4:
   integrity sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==
   dependencies:
     scheduler "^0.27.0"
+
+react-icons@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.7.0.tgz#8969db00968ffdfc57fdc2ec9dd1ed88e35b3de9"
+  integrity sha512-LBLy340Rzqy6+/yVhZKT3B/QpP1BZaesGqasf09HPOBzRarcDIFH0WwXlXQfE7q7ipxK4MSiC5DIBWURCny6fw==
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -3019,6 +3029,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+tailwind-merge@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-3.6.0.tgz#88d83242d1dd7bc847223f73dcf210dd1f2ee11c"
+  integrity sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==
 
 tailwindcss@4.3.3, tailwindcss@^4:
   version "4.3.3"

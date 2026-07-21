@@ -3,6 +3,8 @@
 :root {
   --background: #fefefe;
   --foreground: #171717;
+  --site-width: 1280px;
+  --site-horizontal-padding: 16px;
 }
 
 @theme inline {
@@ -11,6 +13,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-primary: var(--color-blue-700);
+  --container-site-w: var(--site-width);
+  --spacing-site-px: var(--site-horizontal-padding);
 }
 
 @media (prefers-color-scheme: light) {

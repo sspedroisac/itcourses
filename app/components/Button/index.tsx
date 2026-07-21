@@ -1,30 +1,35 @@
+// === Utils ===
 import { ButtonProps } from "./types";
+import { twMerge } from "tailwind-merge";
 
+// === Component ===
 export default function Button({
   onClick,
   disabled,
   type,
   label,
   className,
+  icon,
 }: ButtonProps) {
   let buttonClass =
-    "bg-primary hover:bg-primary text-white font-bold py-2 px-4 rounded";
+    "cursor-pointer flex items-center justify-center gap-2 flex-row hover:opacity-85 rounded py-2 px-4 font-bold";
+
+  buttonClass += " bg-primary text-white";
 
   if (type === "outlined") {
-    buttonClass =
-      "bg-transparent border border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 px-4 rounded";
+    buttonClass += " bg-transparent border border-primary text-primary";
   } else if (type === "text") {
-    buttonClass =
-      "bg-transparent text-primary hover:text-primary font-bold py-2 px-4 rounded";
+    buttonClass += " bg-transparent text-primary";
   }
 
   return (
     <button
       onClick={onClick}
-      className={`${buttonClass} ${className ?? ""}`}
+      className={twMerge(buttonClass, className)}
       disabled={disabled}
     >
-      {label}
+      {icon}
+      <span>{label}</span>
     </button>
   );
 }

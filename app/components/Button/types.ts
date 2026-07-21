@@ -4,4 +4,5 @@ export type ButtonProps = {
   disabled?: boolean;
   type?: "filled" | "outlined" | "text";
   className?: string;
+  icon?: React.ReactNode;
 };
