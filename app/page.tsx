@@ -1,5 +1,6 @@
 import BannerHero from "./components/BannerHero";
 import HowWorks from "./components/HowWorks";
+import OurCourses from "./components/OurCourses";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <main>
         <BannerHero />
         <HowWorks />
+        <OurCourses />
       </main>
     </div>
   );

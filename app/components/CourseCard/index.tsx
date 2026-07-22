@@ -1,0 +1,49 @@
+// === Components ===
+import { Book, Star } from "lucide-react";
+import ProgressBar from "../ProgressBar";
+
+// === Utils ===
+import { twMerge } from "tailwind-merge";
+import { CourseCardProps } from "./types";
+
+// === Component ===
+export default function CourseCard({
+  title,
+  modulesCount,
+  progress,
+  isFavorite = false,
+  progressColor = "bg-primary",
+  icon,
+  iconColor = "text-primary",
+  iconBgColor = "bg-blue-100",
+}: CourseCardProps) {
+  return (
+    <div className="border border-olive-200 p-4 rounded flex flex-col gap-4 shadow-2xs">
+      <div className="flex items-center justify-between">
+        <div className="flex gap-2">
+          <div
+            className={twMerge(
+              `bg-blue-100 w-12 h-12 rounded flex items-center justify-center`,
+              iconColor,
+              iconBgColor,
+            )}
+          >
+            {icon || <Book />}
+          </div>
+          <div>
+            <p className="font-bold text-olive">{title}</p>
+            <span className="text-olive opacity-70">
+              {modulesCount} Modules
+            </span>
+          </div>
+        </div>
+        <button
+          className={`text-olive opacity-70 cursor-pointer ${isFavorite ? "text-yellow-500" : ""}`}
+        >
+          <Star fill={isFavorite ? "currentColor" : "none"} />
+        </button>
+      </div>
+      <ProgressBar progress={progress} color={progressColor} />
+    </div>
+  );
+}
