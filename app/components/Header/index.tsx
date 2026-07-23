@@ -1,8 +1,6 @@
 // === Components ===
 import Logo from "../Logo";
 import Button from "../Button";
-
-// === Utils ===
 import Link from "next/link";
 
 // === Component ===
@@ -13,10 +11,12 @@ export default function Header() {
         <Link href="/">
           <Logo />
         </Link>
-        <Button
-          label="Explore Courses"
-          className="bg-olive-900 hover:opacity-85"
-        />
+        <Link href="/explore">
+          <Button
+            label="Explore Courses"
+            className="bg-olive-900 hover:opacity-85"
+          />
+        </Link>
       </div>
     </header>
   );
