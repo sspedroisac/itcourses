@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { SearchCoursesProps } from "./type";
 import { isCourseFavorite } from "../../lib/favorites";
+import { getProgressPercentage } from "../../lib/progress";
 
 // === Component ===
 export default function SearchCourses({ courses }: SearchCoursesProps) {
@@ -25,8 +26,9 @@ export default function SearchCourses({ courses }: SearchCoursesProps) {
       <CourseCard
         key={course.slug}
         title={course.title}
-        modulesCount={course.modulesCount}
+        totalClassesCount={course.totalClassesCount}
         slug={course.slug}
+        progress={getProgressPercentage(course.slug, course.totalClassesCount)}
       />
     ));
   };

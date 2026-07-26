@@ -14,7 +14,7 @@ import { toogleFavoriteCourse, isCourseFavorite } from "../../lib/favorites";
 // === Component ===
 export default function CourseCard({
   title,
-  modulesCount,
+  totalClassesCount,
   progress,
   progressColor = "bg-primary",
   icon,
@@ -47,11 +47,13 @@ export default function CourseCard({
             >
               {icon || <Book />}
             </div>
-            <div>
+            <div className="flex flex-col gap-1 justify-center">
               <p className="font-bold text-olive">{title}</p>
-              <span className="text-olive opacity-70">
-                {modulesCount} Modules
-              </span>
+              {totalClassesCount && (
+                <span className="text-olive opacity-70">
+                  {totalClassesCount} Classes
+                </span>
+              )}
             </div>
           </div>
           <button

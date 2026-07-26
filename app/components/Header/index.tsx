@@ -6,7 +6,7 @@ import Link from "next/link";
 // === Component ===
 export default function Header() {
   return (
-    <header className="bg-background text-olive px-site-px py-4 border-b border-b-olive-200">
+    <header className="bg-background text-olive px-site-px py-4 border-b border-b-olive-200 sticky top-0 z-50">
       <div className="w-full max-w-site-w mx-auto flex items-center justify-between">
         <Link href="/">
           <Logo />

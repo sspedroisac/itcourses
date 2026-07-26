@@ -12,7 +12,7 @@ export default function ProgressBar({
     <div className="flex items-center gap-2">
       <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
         <div
-          className={twMerge(`h-2`, color)}
+          className={twMerge(`h-2 transition-all duration-300`, color)}
           style={{ width: `${progress}%` }}
         ></div>
       </div>

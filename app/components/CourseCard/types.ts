@@ -1,6 +1,6 @@
 export type CourseCardProps = {
   title: string;
-  modulesCount: number;
+  totalClassesCount?: number;
   progress?: number;
   progressColor?: string;
   icon?: React.ReactNode;

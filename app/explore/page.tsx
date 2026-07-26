@@ -12,7 +12,7 @@ export default async function ExplorePage() {
   return (
     <div>
       <SectionWrapper>
-        <div className="flex gap-12">
+        <div className="flex gap-12 min-h-[76vh]">
           <div className="w-1/4 border-r border-gray-200 pr-4">
             <CoursesFilter />
           </div>

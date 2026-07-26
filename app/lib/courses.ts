@@ -1,5 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import fs from "fs/promises";
 import path from "path";
+
+const getTotalClassesCount = (modules: any[]) => {
+  return modules.reduce((acc, module) => acc + module.classes.length, 0);
+};
 
 export async function getCourses(query?: string) {
   const coursesDir = path.join(process.cwd(), "content", "courses");
@@ -17,14 +23,36 @@ export async function getCourses(query?: string) {
       return {
         slug,
         title: courseData.title,
+        totalClassesCount: getTotalClassesCount(courseData.modules),
         modulesCount: courseData.modules.length,
       };
     }),
   );
-
   return query
     ? courses.filter((course) =>
         course.title.toLowerCase().includes(query.toLowerCase()),
       )
     : courses;
+}
+
+export async function getCourse(slug: string) {
+  const file = path.join(
+    process.cwd(),
+    "content",
+    "courses",
+    slug,
+    "course.json",
+  );
+
+  const json = await fs.readFile(file, "utf8");
+
+  const courseData = JSON.parse(json);
+
+  return {
+    slug,
+    title: courseData.title,
+    modulesCount: courseData.modules.length,
+    totalClassesCount: getTotalClassesCount(courseData.modules),
+    modules: courseData.modules,
+  };
 }

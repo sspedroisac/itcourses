@@ -1,18 +1,28 @@
 // === Components ===
 import SectionWrapper from "../../components/SectionWrapper";
-import CourseCard from "../../components/CourseCard";
 import CourseContent from "../../components/CourseContent";
 import CourseModulesCheckList from "../../components/CourseModulesCheckList";
+import { getCourse } from "../../lib/courses";
 
 // === Page ===
-export default function CoursePage() {
+export default async function CoursePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const course = await getCourse(slug);
+
   return (
     <SectionWrapper>
-      <div className="flex gap-12">
+      <div className="flex gap-12 min-h-[75vh]">
         <div className="w-1/4 border-r border-gray-200 pr-4">
-          <CourseCard title="Test" modulesCount={12} progress={12} />
-
-          <CourseModulesCheckList />
+          <CourseModulesCheckList
+            modules={course.modules}
+            slug={slug}
+            totalClassesCount={course.totalClassesCount}
+            title={course.title}
+          />
         </div>
 
         <div className="w-3/4">
