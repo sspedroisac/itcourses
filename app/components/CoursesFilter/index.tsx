@@ -84,7 +84,7 @@ export default function CoursesFilter({ className }: CoursesFilterProps) {
       params.delete("favorite");
     }
 
-    router.replace(`/explore?${params.toString()}`);
+    router.replace(`/courses?${params.toString()}`);
   }, [selectedFavorites]);
 
   return (

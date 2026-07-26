@@ -56,3 +56,29 @@ export async function getCourse(slug: string) {
     modules: courseData.modules,
   };
 }
+
+export async function getClass(slug: string, slugClass: string) {
+  const file = path.join(
+    process.cwd(),
+    "content",
+    "courses",
+    slug,
+    `${slugClass}.md`,
+  );
+
+  try {
+    const content = await fs.readFile(file, "utf8");
+
+    return {
+      slug,
+      slugClass,
+      content,
+    };
+  } catch (error) {
+    return {
+      slug,
+      slugClass,
+      content: "Class not found",
+    };
+  }
+}

@@ -11,15 +11,13 @@ export default function BannerHero() {
       <div className="flex justify-between items-center gap-16 w-full max-w-site-w mx-auto">
         <div>
           <h1 className="text-6xl font-bold mb-4 text-shadow-md">
-            100% Free <span className="text-primary">Technology Courses</span>
+            Learn, Build, and Grow with{" "}
+            <span className="text-primary">IT Courses</span>
           </h1>
           <p className="opacity-70 max-w-lg line-height-6">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since 1966, when designers at Letraset and James Mosley, the
-            librarian at St Bride Printing Library in London, took a 1914 Cicero
-            translation and scrambled it to make dummy text for Letraset's Body
-            Type sheets.
+            Unlock your potential with comprehensive IT courses. From beginner
+            to advanced levels, gain the skills you need to succeed in the
+            ever-evolving tech industry.
           </p>
           <div className="mt-8 flex gap-4">
             <Button label="Explore Courses" className="shadow-2xs w-3xs" />

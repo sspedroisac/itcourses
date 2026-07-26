@@ -1,16 +1,16 @@
 // === Components ===
-import SectionWrapper from "../../components/SectionWrapper";
-import CourseContent from "../../components/CourseContent";
-import CourseModulesCheckList from "../../components/CourseModulesCheckList";
-import { getCourse } from "../../lib/courses";
+import SectionWrapper from "../../../components/SectionWrapper";
+import CourseContent from "../../../components/CourseContent";
+import CourseModulesCheckList from "../../../components/CourseModulesCheckList";
+import { getCourse } from "../../../lib/courses";
 
 // === Page ===
-export default async function CoursePage({
+export default async function ClassPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; class: string }>;
 }) {
-  const { slug } = await params;
+  const { slug, class: slugClass } = await params;
   const course = await getCourse(slug);
 
   return (
@@ -26,7 +26,7 @@ export default async function CoursePage({
         </div>
 
         <div className="w-3/4">
-          <CourseContent content="course content" />
+          <CourseContent slug={slug} slugClass={slugClass} />
         </div>
       </div>
     </SectionWrapper>

@@ -11,7 +11,7 @@ export default function Header() {
         <Link href="/">
           <Logo />
         </Link>
-        <Link href="/explore">
+        <Link href="/courses">
           <Button
             label="Explore Courses"
             className="bg-olive-900 hover:opacity-85"

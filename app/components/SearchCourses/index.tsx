@@ -40,7 +40,7 @@ export default function SearchCourses({ courses }: SearchCoursesProps) {
   const handleSearchSubmit = () => {
     const params = new URLSearchParams(searchParams);
     params.set("query", searchQuery);
-    router.replace(`/explore?${params.toString()}`);
+    router.replace(`/courses?${params.toString()}`);
   };
 
   useEffect(() => {

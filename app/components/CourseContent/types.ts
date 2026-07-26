@@ -1,3 +1,4 @@
 export type CourseContentProps = {
-  content: string;
+  slug: string;
+  slugClass: string;
 };
