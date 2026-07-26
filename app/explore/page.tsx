@@ -3,8 +3,12 @@ import SectionWrapper from "../components/SectionWrapper";
 import CoursesFilter from "../components/CoursesFilter";
 import SearchCourses from "../components/SearchCourses";
 
+import { getCourses } from "../lib/courses";
+
 // === Page ===
-export default function Explore() {
+export default async function ExplorePage() {
+  const courses = await getCourses();
+
   return (
     <div>
       <SectionWrapper>
@@ -24,7 +28,7 @@ export default function Explore() {
             </div>
 
             <div className="mt-6">
-              <SearchCourses />
+              <SearchCourses courses={courses} />
             </div>
           </div>
         </div>

@@ -1,0 +1,19 @@
+{
+  "title": "Information Security",
+  "slug": "information-security",
+  "modules": [
+    {
+      "title": "Introduction",
+      "classes": [
+        {
+          "title": "What is Information Security?",
+          "slug": "what-is-information-security"
+        },
+        {
+          "title": "Why is Information Security Important?",
+          "slug": "why-is-information-security-important"
+        }
+      ]
+    }
+  ]
+}

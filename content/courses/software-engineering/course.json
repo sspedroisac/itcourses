@@ -1,0 +1,19 @@
+{
+  "title": "Software Engineering",
+  "slug": "software-engineering",
+  "modules": [
+    {
+      "title": "Introduction",
+      "classes": [
+        {
+          "title": "What is Software Engineering?",
+          "slug": "what-is-software-engineering"
+        },
+        {
+          "title": "Why is Software Engineering Important?",
+          "slug": "why-is-software-engineering-important"
+        }
+      ]
+    }
+  ]
+}
