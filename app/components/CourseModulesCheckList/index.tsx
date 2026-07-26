@@ -3,6 +3,7 @@
 // === Components ===
 import CheckBox from "../CheckBox";
 import CourseCard from "../CourseCard";
+import Link from "next/link";
 
 // === Utils ===
 import { useState } from "react";
@@ -30,12 +31,15 @@ export default function CourseModulesCheckList({
         <span className="font-bold">{module.title}</span>
         <div className="mt-6 flex flex-col gap-4">
           {module.classes.map((classItem) => (
-            <CheckBox
-              key={classItem.slug}
-              label={classItem.title}
-              checked={progress.includes(classItem.slug)}
-              onChange={() => handleCheckBoxChange(classItem.slug)}
-            />
+            <div key={classItem.slug} className="flex">
+              <CheckBox
+                checked={progress.includes(classItem.slug)}
+                onChange={() => handleCheckBoxChange(classItem.slug)}
+              />
+              <Link href={`/courses/${slug}/${classItem.slug}`}>
+                <span>{classItem.title}</span>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

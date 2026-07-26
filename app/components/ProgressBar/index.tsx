@@ -7,6 +7,7 @@ export default function ProgressBar({
   progress,
   showPercentage = true,
   color = "bg-blue-500",
+  precision = 0,
 }: ProgressBarProps) {
   return (
     <div className="flex items-center gap-2">
@@ -17,7 +18,9 @@ export default function ProgressBar({
         ></div>
       </div>
       {showPercentage && (
-        <span className="text-olive opacity-70">{progress}%</span>
+        <span className="text-olive opacity-70">
+          {progress.toFixed(precision)}%
+        </span>
       )}
     </div>
   );
