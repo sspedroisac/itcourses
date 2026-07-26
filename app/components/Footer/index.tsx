@@ -2,37 +2,11 @@
 import Logo from "../Logo";
 import Link from "next/link";
 
+// === Utils ===
+import siteConfig from "../../config/site";
+
 // === Component ===
 export default function Footer() {
-  const footerLinks = [
-    {
-      title: "Support",
-      links: [
-        {
-          label: "Github",
-          href: "",
-        },
-      ],
-    },
-    {
-      title: "Legal",
-      links: [
-        {
-          label: "Privacy Policy",
-          href: "#",
-        },
-        {
-          label: "Terms of Service",
-          href: "#",
-        },
-        {
-          label: "Licence",
-          href: "#",
-        },
-      ],
-    },
-  ];
-
   return (
     <footer className="bg-gray-900 py-8">
       <div className="max-w-site-w mx-auto px-site-px flex flex-col items-center gap-4">
@@ -45,7 +19,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-12">
-            {footerLinks.map((section, index) => (
+            {siteConfig.footer.sections.map((section, index) => (
               <div key={index} className="flex flex-col gap-2">
                 <p className="text-white font-bold">{section.title}</p>
                 {section.links.map((link, linkIndex) => (

@@ -53,7 +53,7 @@ export default function HowWorks() {
       <SectionInfo
         title="How It Works"
         description="Learn how our platform works in a few simple steps."
-        linkHref="/"
+        linkHref="/courses"
         linkText="Explore Courses"
       />
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">

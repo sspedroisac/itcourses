@@ -9,12 +9,9 @@ export default function SectionWrapper({
   classNameInner,
 }: SectionWrapperProps) {
   return (
-    <div className={twMerge("w-full", className)}>
+    <div className={twMerge("w-full px-site-px", className)}>
       <div
-        className={twMerge(
-          "w-full max-w-site-w mx-auto px-site-px py-20",
-          classNameInner,
-        )}
+        className={twMerge("w-full max-w-site-w mx-auto py-20", classNameInner)}
       >
         {children}
       </div>

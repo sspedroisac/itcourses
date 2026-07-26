@@ -1,8 +1,10 @@
 // === Components ===
-import SectionWrapper from "../../../components/SectionWrapper";
-import CourseContent from "../../../components/CourseContent";
-import CourseModulesCheckList from "../../../components/CourseModulesCheckList";
-import { getCourse } from "../../../lib/courses";
+import SectionWrapper from "../../../../components/SectionWrapper";
+import CourseContent from "../../../../components/CourseContent";
+import CourseModulesCheckList from "../../../../components/CourseModulesCheckList";
+
+// === Utils ===
+import { getCourse } from "../../../../lib/courses";
 
 // === Page ===
 export default async function ClassPage({

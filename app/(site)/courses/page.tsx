@@ -1,9 +1,9 @@
 // === Components ===
-import SectionWrapper from "../components/SectionWrapper";
-import CoursesFilter from "../components/CoursesFilter";
-import SearchCourses from "../components/SearchCourses";
+import SectionWrapper from "../../components/SectionWrapper";
+import CoursesFilter from "../../components/CoursesFilter";
+import SearchCourses from "../../components/SearchCourses";
 
-import { getCourses } from "../lib/courses";
+import { getCourses } from "../../lib/courses";
 
 // === Page ===
 export default async function ExplorePage() {
@@ -22,8 +22,8 @@ export default async function ExplorePage() {
                 Find your course
               </h2>
               <p className="mt-2 text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting.
+                Explore our wide range of IT courses and find the perfect one
+                for you.
               </p>
             </div>
 
