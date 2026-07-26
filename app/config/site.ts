@@ -1,6 +1,6 @@
 const siteConfig = {
   github: {
-    url: "https://github.com/sspedroisac/courses",
+    url: "https://github.com/sspedroisac/itcourses",
   },
   footer: {
     sections: [
@@ -9,7 +9,7 @@ const siteConfig = {
         links: [
           {
             label: "Github",
-            href: "https://github.com/sspedroisac/courses",
+            href: "https://github.com/sspedroisac/itcourses",
           },
         ],
       },
