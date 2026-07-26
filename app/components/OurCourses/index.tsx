@@ -36,9 +36,7 @@ export default function OurCourses() {
       <CoursesCard
         key={index}
         title={course.title}
-        modulesCount={course.modulesCount}
         progress={course.progress}
-        isFavorite={course.isFavorite}
         progressColor={course.progressColor}
         icon={course.icon}
         iconColor={course.iconColor}
