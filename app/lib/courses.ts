@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import fs from "fs/promises";
-import path from "path";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 const getTotalClassesCount = (modules: any[]) => {
   return modules.reduce((acc, module) => acc + module.classes.length, 0);
