@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "docker-exec": "docker compose exec app sh",
+    "docker-up": "docker compose up"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",
