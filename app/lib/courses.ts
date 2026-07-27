@@ -8,7 +8,7 @@ const getTotalClassesCount = (modules: any[]) => {
 };
 
 export async function getCourses(query?: string) {
-  const coursesDir = path.join(process.cwd(), "content", "courses");
+  const coursesDir = path.join(process.cwd(), "app", "content", "courses");
 
   const directories = await fs.readdir(coursesDir);
 
@@ -38,6 +38,7 @@ export async function getCourses(query?: string) {
 export async function getCourse(slug: string) {
   const file = path.join(
     process.cwd(),
+    "app",
     "content",
     "courses",
     slug,
@@ -60,6 +61,7 @@ export async function getCourse(slug: string) {
 export async function getClass(slug: string, slugClass: string) {
   const file = path.join(
     process.cwd(),
+    "app",
     "content",
     "courses",
     slug,
