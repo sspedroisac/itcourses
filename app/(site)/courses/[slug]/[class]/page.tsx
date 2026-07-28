@@ -18,17 +18,17 @@ export default async function ClassPage({
   return (
     <SectionWrapper>
       <div className="flex gap-12 min-h-[75vh]">
-        <div className="w-1/4 border-r border-gray-200 pr-4">
+        <div className="w-3/4">
+          <CourseContent slug={slug} slugClass={slugClass} />
+        </div>
+
+        <div className="w-1/4">
           <CourseModulesCheckList
             modules={course.modules}
             slug={slug}
             totalClassesCount={course.totalClassesCount}
             title={course.title}
           />
-        </div>
-
-        <div className="w-3/4">
-          <CourseContent slug={slug} slugClass={slugClass} />
         </div>
       </div>
     </SectionWrapper>

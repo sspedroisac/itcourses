@@ -42,10 +42,3 @@ next-env.d.ts
 
 #docker
 docker-compose.yml
-# OpenNext
-.open-next
-
-# wrangler files
-.wrangler
-.dev.vars*
-!.dev.vars.example

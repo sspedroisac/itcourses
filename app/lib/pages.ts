@@ -1,5 +1,5 @@
-import fs from "node:fs/promises";
-import path from "node:path";
+import fs from "fs/promises";
+import path from "path";
 
 export function getPageContent(page: string) {
   const filePath = path.join(process.cwd(), `app/content/pages/${page}.md`);
