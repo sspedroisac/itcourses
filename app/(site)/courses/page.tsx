@@ -16,9 +16,6 @@ export default async function ExplorePage() {
       <div>
         <SectionWrapper>
           <div className="flex gap-12 min-h-[76vh]">
-            <div className="w-1/4 border-r border-gray-200 pr-4">
-              <CoursesFilter />
-            </div>
             <div className="w-3/4">
               <div>
                 <h2 className="font-bold text-olive-900 text-2xl">
@@ -33,6 +30,10 @@ export default async function ExplorePage() {
               <div className="mt-6">
                 <SearchCourses courses={courses} />
               </div>
+            </div>
+
+            <div className="w-1/4 border-l border-gray-200 pl-8">
+              <CoursesFilter />
             </div>
           </div>
         </SectionWrapper>
