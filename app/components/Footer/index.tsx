@@ -14,7 +14,7 @@ export default function Footer() {
           <div>
             <Logo iconClassName="text-white" titleClassName="text-white" />
             <p className="text-white opacity-70 text-sm mt-4">
-              &copy; {new Date().getFullYear()} Pedro Isac. All rights reserved.
+              &copy; {new Date().getFullYear()} Pedro Isac • Open Source (MIT)
             </p>
           </div>
 
