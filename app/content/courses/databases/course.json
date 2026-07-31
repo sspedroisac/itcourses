@@ -1,0 +1,254 @@
+{
+  "title": "Databases",
+  "slug": "databases",
+  "description": "Learn the fundamentals of databases, including data modeling, SQL, normalization, indexing, transactions, NoSQL systems, security, backups, and performance tuning. Build a practical foundation for designing, querying, and operating reliable data systems.",
+  "level": "Beginner",
+  "modules": [
+    {
+      "title": "Introduction",
+      "classes": [
+        {
+          "title": "What Is a Database?",
+          "slug": "what-is-a-database"
+        },
+        {
+          "title": "Types of Databases",
+          "slug": "types-of-databases"
+        },
+        {
+          "title": "Structured Data and Unstructured Data",
+          "slug": "structured-data-and-unstructured-data"
+        },
+        {
+          "title": "Database Management Systems",
+          "slug": "database-management-systems"
+        },
+        {
+          "title": "Common Database Terminology",
+          "slug": "common-database-terminology"
+        }
+      ]
+    },
+    {
+      "title": "Relational Foundations",
+      "classes": [
+        {
+          "title": "Tables, Rows, and Columns",
+          "slug": "tables-rows-and-columns"
+        },
+        {
+          "title": "Primary Keys and Foreign Keys",
+          "slug": "primary-keys-and-foreign-keys"
+        },
+        {
+          "title": "Relationships Between Tables",
+          "slug": "relationships-between-tables"
+        },
+        {
+          "title": "Normalization Basics",
+          "slug": "normalization-basics"
+        },
+        {
+          "title": "Constraints and Data Integrity",
+          "slug": "constraints-and-data-integrity"
+        }
+      ]
+    },
+    {
+      "title": "SQL Basics",
+      "classes": [
+        {
+          "title": "Introduction to SQL",
+          "slug": "introduction-to-sql"
+        },
+        {
+          "title": "Selecting Data with SELECT",
+          "slug": "selecting-data-with-select"
+        },
+        {
+          "title": "Filtering Data with WHERE",
+          "slug": "filtering-data-with-where"
+        },
+        {
+          "title": "Sorting and Limiting Results",
+          "slug": "sorting-and-limiting-results"
+        },
+        {
+          "title": "Inserting, Updating, and Deleting Data",
+          "slug": "inserting-updating-and-deleting-data"
+        }
+      ]
+    },
+    {
+      "title": "Querying and Analysis",
+      "classes": [
+        {
+          "title": "Joins",
+          "slug": "joins"
+        },
+        {
+          "title": "Aggregate Functions",
+          "slug": "aggregate-functions"
+        },
+        {
+          "title": "GROUP BY and HAVING",
+          "slug": "group-by-and-having"
+        },
+        {
+          "title": "Subqueries",
+          "slug": "subqueries"
+        },
+        {
+          "title": "Views",
+          "slug": "views"
+        }
+      ]
+    },
+    {
+      "title": "Design and Modeling",
+      "classes": [
+        {
+          "title": "Entity Relationship Modeling",
+          "slug": "entity-relationship-modeling"
+        },
+        {
+          "title": "Choosing Data Types",
+          "slug": "choosing-data-types"
+        },
+        {
+          "title": "Denormalization",
+          "slug": "denormalization"
+        },
+        {
+          "title": "Schema Evolution",
+          "slug": "schema-evolution"
+        },
+        {
+          "title": "Designing for Read and Write Patterns",
+          "slug": "designing-for-read-and-write-patterns"
+        }
+      ]
+    },
+    {
+      "title": "Transactions and Consistency",
+      "classes": [
+        {
+          "title": "What Is a Transaction?",
+          "slug": "what-is-a-transaction"
+        },
+        {
+          "title": "ACID Properties",
+          "slug": "acid-properties"
+        },
+        {
+          "title": "Isolation Levels",
+          "slug": "isolation-levels"
+        },
+        {
+          "title": "Concurrency Control",
+          "slug": "concurrency-control"
+        },
+        {
+          "title": "Eventual Consistency",
+          "slug": "eventual-consistency"
+        }
+      ]
+    },
+    {
+      "title": "Performance and Optimization",
+      "classes": [
+        {
+          "title": "Indexes",
+          "slug": "indexes"
+        },
+        {
+          "title": "Reading Query Plans",
+          "slug": "reading-query-plans"
+        },
+        {
+          "title": "Avoiding Slow Queries",
+          "slug": "avoiding-slow-queries"
+        },
+        {
+          "title": "Caching Strategies",
+          "slug": "caching-strategies"
+        },
+        {
+          "title": "Partitioning and Sharding",
+          "slug": "partitioning-and-sharding"
+        }
+      ]
+    },
+    {
+      "title": "NoSQL and Distributed Systems",
+      "classes": [
+        {
+          "title": "Document Databases",
+          "slug": "document-databases"
+        },
+        {
+          "title": "Key-Value Databases",
+          "slug": "key-value-databases"
+        },
+        {
+          "title": "Column-Family Databases",
+          "slug": "column-family-databases"
+        },
+        {
+          "title": "Graph Databases",
+          "slug": "graph-databases"
+        },
+        {
+          "title": "CAP Theorem Basics",
+          "slug": "cap-theorem-basics"
+        }
+      ]
+    },
+    {
+      "title": "Security and Operations",
+      "classes": [
+        {
+          "title": "Database Authentication and Authorization",
+          "slug": "database-authentication-and-authorization"
+        },
+        {
+          "title": "SQL Injection Prevention",
+          "slug": "sql-injection-prevention"
+        },
+        {
+          "title": "Backup and Recovery",
+          "slug": "backup-and-recovery"
+        },
+        {
+          "title": "Monitoring Database Health",
+          "slug": "monitoring-database-health"
+        },
+        {
+          "title": "Migration Strategies",
+          "slug": "migration-strategies"
+        }
+      ]
+    },
+    {
+      "title": "Real-World Practice",
+      "classes": [
+        {
+          "title": "Choosing the Right Database",
+          "slug": "choosing-the-right-database"
+        },
+        {
+          "title": "Working with ORMs",
+          "slug": "working-with-orms"
+        },
+        {
+          "title": "Data Governance Basics",
+          "slug": "data-governance-basics"
+        },
+        {
+          "title": "Common Database Mistakes",
+          "slug": "common-database-mistakes"
+        }
+      ]
+    }
+  ]
+}
