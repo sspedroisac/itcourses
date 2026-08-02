@@ -15,7 +15,13 @@ export default async function ExplorePage() {
   const t = await getTranslations("coursesPage");
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="flex justify-center items-center min-h-[76vh]">
+          Loading...
+        </div>
+      }
+    >
       <div>
         <SectionWrapper>
           <div className="flex gap-12 min-h-[76vh]">

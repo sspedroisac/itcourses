@@ -2,7 +2,7 @@
 import { ArrowRightIcon } from "lucide-react";
 
 // === Utils ===
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { SectionInfoProps } from "./types";
 
 // === Component ===
@@ -11,7 +11,7 @@ export default function SectionInfo({
   description,
   showLink = true,
   linkText,
-  linkHref = "/",
+  linkHref,
 }: SectionInfoProps) {
   return (
     <section className="bg-background text-olive">
@@ -23,7 +23,7 @@ export default function SectionInfo({
 
         {showLink && (
           <Link
-            href={linkHref}
+            href={linkHref || "/"}
             className="flex items-center gap-2 text-primary"
           >
             {linkText} <ArrowRightIcon className="w-4 h-4" />

@@ -27,9 +27,9 @@ export default function LanguageSwitcher() {
     "bg-white text-black px-2 py-1 hover:bg-gray-200 w-[180px] text-left flex cursor-pointer no-wrap";
 
   const trigger = (
-    <button className="cursor-pointer">
+    <div className="cursor-pointer">
       {options.find((option) => option.value === currentLocale)?.label}
-    </button>
+    </div>
   );
 
   return (

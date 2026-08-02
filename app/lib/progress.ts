@@ -1,3 +1,5 @@
+"use client";
+
 export function getProgress(slug: string) {
   const progress = localStorage.getItem(`progress-${slug}`);
 
