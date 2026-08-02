@@ -1,13 +1,5 @@
-import BannerHero from "../components/BannerHero";
-import HowWorks from "../components/HowWorks";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <div className="font-sans">
-      <main>
-        <BannerHero />
-        <HowWorks />
-      </main>
-    </div>
-  );
+export default function InitPage() {
+  return redirect(`/en`);
 }

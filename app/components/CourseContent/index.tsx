@@ -10,8 +10,9 @@ import remarkGfm from "remark-gfm";
 export default async function CourseContent({
   slug,
   slugClass,
+  lang,
 }: CourseContentProps) {
-  const courseClass = await getClass(slug, slugClass);
+  const courseClass = await getClass(slug, slugClass, lang);
 
   return (
     <div className="border border-gray-200 rounded p-4 shadow-2xs">

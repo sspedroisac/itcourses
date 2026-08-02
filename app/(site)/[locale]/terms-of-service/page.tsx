@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import { getPageContent } from "../../lib/pages";
+import { getPageContent } from "../../../lib/pages";
 
 import type { Metadata } from "next";
 
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function PrivacyPolicyPage() {
-  const content = await getPageContent("privacy-policy");
+export default async function TermsOfServicePage() {
+  const content = await getPageContent("terms-of-service");
 
   return (
     <div className="max-w-site-w mx-auto px-site-px py-12">

@@ -1,10 +1,10 @@
 // === Components ===
-import SectionWrapper from "../../components/SectionWrapper";
-import CoursesFilter from "../../components/CoursesFilter";
-import SearchCourses from "../../components/SearchCourses";
+import SectionWrapper from "../../../components/SectionWrapper";
+import CoursesFilter from "../../../components/CoursesFilter";
+import SearchCourses from "../../../components/SearchCourses";
 
 // === Utils ===
-import { getCourses } from "../../lib/courses";
+import { getCourses } from "../../../lib/courses";
 import { Suspense } from "react";
 
 // === Page ===

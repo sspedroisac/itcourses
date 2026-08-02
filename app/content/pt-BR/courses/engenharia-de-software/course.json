@@ -1,0 +1,19 @@
+{
+  "title": "Engenharia de Software",
+  "slug": "engenharia-de-software",
+  "modules": [
+    {
+      "title": "Desenvolvimento Ágil",
+      "classes": [
+        {
+          "title": "SCRUM",
+          "slug": "scrum"
+        },
+        {
+          "title": "Extreme Programming (XP)",
+          "slug": "extreme-programming-xp"
+        }
+      ]
+    }
+  ]
+}

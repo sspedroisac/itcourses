@@ -7,8 +7,14 @@ const getTotalClassesCount = (modules: any[]) => {
   return modules.reduce((acc, module) => acc + module.classes.length, 0);
 };
 
-export async function getCourses(query?: string) {
-  const coursesDir = path.join(process.cwd(), "app", "content", "courses");
+export async function getCourses(query?: string, lang: string = "en") {
+  const coursesDir = path.join(
+    process.cwd(),
+    "app",
+    "content",
+    lang,
+    "courses",
+  );
 
   const directories = await fs.readdir(coursesDir);
 
@@ -35,11 +41,12 @@ export async function getCourses(query?: string) {
     : courses;
 }
 
-export async function getCourse(slug: string) {
+export async function getCourse(slug: string, lang: string) {
   const file = path.join(
     process.cwd(),
     "app",
     "content",
+    lang,
     "courses",
     slug,
     "course.json",
@@ -58,11 +65,12 @@ export async function getCourse(slug: string) {
   };
 }
 
-export async function getClass(slug: string, slugClass: string) {
+export async function getClass(slug: string, slugClass: string, lang: string) {
   const file = path.join(
     process.cwd(),
     "app",
     "content",
+    lang,
     "courses",
     slug,
     `${slugClass}.md`,
