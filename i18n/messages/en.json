@@ -31,7 +31,7 @@
     "searchButton": "Search"
   },
   "coursesFilter": {
-    "filters": "Filters",
+    "filters": "FILTERS",
     "clearAll": "Clear All",
     "favorites": "Favorites",
     "all": "All",
