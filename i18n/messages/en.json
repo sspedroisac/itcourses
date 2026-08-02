@@ -1,6 +1,25 @@
 {
-  "Common": {
-    "courses": "Courses",
-    "search": "Search"
+  "Header": {
+    "cta": "Explore Courses"
+  },
+  "bannerHero": {
+    "title": "Learn, Build, and Grow with IT Courses",
+    "description": "Unlock your potential with comprehensive IT courses. From beginner to advanced levels, gain the skills you need to succeed in the ever-evolving tech industry.",
+    "cta": "Explore Courses"
+  },
+  "howWorks": {
+    "title": "How It Works",
+    "description": "Learn in a few simple steps.",
+    "cta": "Explore Courses",
+    "steps": {
+      "step1": {
+        "title": "Choose Your Course",
+        "description": "Browse our extensive catalog of IT courses and select the one that aligns with your learning goals."
+      },
+      "step2": {
+        "title": "Learn at Your Own Pace",
+        "description": "Access course materials, video lectures, and hands-on exercises to learn at a pace that suits you best."
+      }
+    }
   }
 }

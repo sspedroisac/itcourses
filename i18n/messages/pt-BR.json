@@ -1,6 +1,25 @@
 {
-  "Common": {
-    "courses": "Cursos",
-    "search": "Pesquisar"
+  "Header": {
+    "cta": "Explorar Cursos"
+  },
+  "bannerHero": {
+    "title": "Aprenda, Construa e Cresça com IT Courses",
+    "description": "Desbloqueie seu potencial com cursos abrangentes de TI. Do nível iniciante ao avançado, adquira as habilidades necessárias para ter sucesso na indústria de tecnologia em constante evolução.",
+    "cta": "Explorar Cursos"
+  },
+  "howWorks": {
+    "title": "Como Funciona",
+    "description": "Aprenda em poucos passos.",
+    "cta": "Explorar Cursos",
+    "steps": {
+      "step1": {
+        "title": "Escolha Seu Curso",
+        "description": "Navegue pelo nosso extenso catálogo de cursos de TI e selecione aquele que se alinha aos seus objetivos de aprendizado."
+      },
+      "step2": {
+        "title": "Aprenda no Seu Próprio Ritmo",
+        "description": "Acesse materiais do curso, videoaulas e exercícios práticos para aprender no ritmo que melhor se adapta a você."
+      }
+    }
   }
 }

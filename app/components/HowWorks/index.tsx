@@ -4,22 +4,25 @@ import StepCard from "../StepCard";
 import { Book, BookOpen } from "lucide-react";
 import SectionWrapper from "../SectionWrapper";
 
+// === Utils ===
+import { getTranslations } from "next-intl/server";
+
 // === Component ===
-export default function HowWorks() {
+export default async function HowWorks() {
+  const t = await getTranslations("howWorks");
+
   const steps = [
     {
       step: 1,
-      title: "Choose your course",
+      title: t("steps.step1.title"),
       icon: <Book size={24} />,
-      description:
-        "Find the course that best fits your needs and start learning today. Our platform offers a wide range of courses to help you achieve your goals.",
+      description: t("steps.step1.description"),
     },
     {
       step: 2,
-      title: "Complete the course",
+      title: t("steps.step2.title"),
       icon: <BookOpen size={24} />,
-      description:
-        "Complete the course at your own pace and gain valuable knowledge and skills.",
+      description: t("steps.step2.description"),
       iconWrapperClassName: "bg-green-100 text-green-600",
       stepWrapperClassName: "bg-green-600 text-white",
     },
@@ -51,10 +54,10 @@ export default function HowWorks() {
   return (
     <SectionWrapper>
       <SectionInfo
-        title="How It Works"
-        description="Learn how our platform works in a few simple steps."
+        title={t("title")}
+        description={t("description")}
         linkHref="/courses"
-        linkText="Explore Courses"
+        linkText={t("cta")}
       />
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
         {renderSteps()}

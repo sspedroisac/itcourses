@@ -6,5 +6,5 @@ export type CourseCardProps = {
   icon?: React.ReactNode;
   iconColor?: string;
   iconBgColor?: string;
-  slug?: string;
+  slug: string;
 };

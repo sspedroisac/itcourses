@@ -5,11 +5,13 @@ import SearchCourses from "../../../components/SearchCourses";
 
 // === Utils ===
 import { getCourses } from "../../../lib/courses";
+import { getLocale } from "next-intl/server";
 import { Suspense } from "react";
 
 // === Page ===
 export default async function ExplorePage() {
-  const courses = await getCourses();
+  const locale = await getLocale();
+  const courses = await getCourses("", locale);
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

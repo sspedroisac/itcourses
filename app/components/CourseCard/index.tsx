@@ -1,7 +1,7 @@
 "use client";
 
 // === Components ===
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Book, Star } from "lucide-react";
 import ProgressBar from "../ProgressBar";
 
@@ -34,7 +34,12 @@ export default function CourseCard({
   };
 
   return (
-    <Link href={slug ? `/courses/${slug}/index` : "#"}>
+    <Link
+      href={{
+        pathname: "/courses/[slug]",
+        params: { slug },
+      }}
+    >
       <div className="border border-olive-200 p-4 rounded flex flex-col gap-4 shadow-2xs">
         <div className="flex items-center justify-between">
           <div className="flex gap-2">
