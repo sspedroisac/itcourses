@@ -13,11 +13,13 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { SearchCoursesProps } from "./type";
 import { isCourseFavorite } from "../../lib/favorites";
 import { getProgressPercentage } from "../../lib/progress";
+import { useTranslations } from "next-intl";
 
 // === Component ===
 export default function SearchCourses({ courses }: SearchCoursesProps) {
   const [filteredCourses, setFilteredCourses] = useState(courses);
   const [searchQuery, setSearchQuery] = useState("");
+  const t = useTranslations("searchCourses");
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -74,10 +76,10 @@ export default function SearchCourses({ courses }: SearchCoursesProps) {
           onChange={handleSearch}
           value={searchQuery}
           type="text"
-          placeholder="Search courses"
+          placeholder={t("searchPlaceholder")}
           className="w-full rounded border border-gray-300 bg-white py-2 pl-14 pr-4 text-gray-700"
         />
-        <Button label="Search" onClick={handleSearchSubmit} />
+        <Button label={t("searchButton")} onClick={handleSearchSubmit} />
       </div>
       <div className="flex flex-col gap-6 mt-6">{renderCourses()}</div>
     </div>

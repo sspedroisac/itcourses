@@ -21,5 +21,20 @@
         "description": "Acesse materiais do curso, videoaulas e exercícios práticos para aprender no ritmo que melhor se adapta a você."
       }
     }
+  },
+  "coursesPage": {
+    "title": "Encontre seu curso ideal",
+    "description": "Explore uma ampla variedade de cursos de TI."
+  },
+  "searchCourses": {
+    "searchPlaceholder": "Pesquisar cursos...",
+    "searchButton": "Pesquisar"
+  },
+  "coursesFilter": {
+    "filters": "Filtros",
+    "clearAll": "Limpar Todos",
+    "favorites": "Favoritos",
+    "all": "Todos",
+    "notFavorites": "Não Favoritos"
   }
 }

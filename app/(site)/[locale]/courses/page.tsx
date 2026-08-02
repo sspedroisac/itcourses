@@ -5,13 +5,14 @@ import SearchCourses from "../../../components/SearchCourses";
 
 // === Utils ===
 import { getCourses } from "../../../lib/courses";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 
 // === Page ===
 export default async function ExplorePage() {
   const locale = await getLocale();
   const courses = await getCourses("", locale);
+  const t = await getTranslations("coursesPage");
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -21,12 +22,9 @@ export default async function ExplorePage() {
             <div className="w-3/4">
               <div>
                 <h2 className="font-bold text-olive-900 text-2xl">
-                  Find your course
+                  {t("title")}
                 </h2>
-                <p className="mt-2 text-gray-500">
-                  Explore our wide range of IT courses and find the perfect one
-                  for you.
-                </p>
+                <p className="mt-2 text-gray-500">{t("description")}</p>
               </div>
 
               <div className="mt-6">

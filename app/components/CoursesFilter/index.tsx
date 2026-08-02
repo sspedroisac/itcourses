@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { CoursesFilterProps } from "./types";
 import { twMerge } from "tailwind-merge";
 import { useSearchParams, useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 // === Component ===
 export default function CoursesFilter({ className }: CoursesFilterProps) {
@@ -17,23 +18,24 @@ export default function CoursesFilter({ className }: CoursesFilterProps) {
   );
   const searchParams = useSearchParams();
   const router = useRouter();
+  const t = useTranslations("coursesFilter");
 
   const bottomBorderClass = "border-b border-gray-200 pb-12";
 
   const filterSections = [
     {
-      title: "Favorites",
+      title: t("favorites"),
       options: [
         {
-          label: "All",
+          label: t("all"),
           value: null,
         },
         {
-          label: "Not Favorites",
+          label: t("notFavorites"),
           value: "0",
         },
         {
-          label: "Favorites",
+          label: t("favorites"),
           value: "1",
         },
       ],
@@ -90,8 +92,8 @@ export default function CoursesFilter({ className }: CoursesFilterProps) {
   return (
     <div className={className}>
       <div className="flex items-center justify-between">
-        <span className="opacity-50">FILTERS</span>
-        <Button label="Clear All" type="text" onClick={clearAllFilters} />
+        <span className="opacity-50">{t("filters")}</span>
+        <Button label={t("clearAll")} type="text" onClick={clearAllFilters} />
       </div>
 
       {renderFilterSections()}

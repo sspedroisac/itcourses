@@ -21,5 +21,20 @@
         "description": "Access course materials, video lectures, and hands-on exercises to learn at a pace that suits you best."
       }
     }
+  },
+  "coursesPage": {
+    "title": "Find Your Ideal Course",
+    "description": "Explore a wide variety of IT."
+  },
+  "searchCourses": {
+    "searchPlaceholder": "Search for courses...",
+    "searchButton": "Search"
+  },
+  "coursesFilter": {
+    "filters": "Filters",
+    "clearAll": "Clear All",
+    "favorites": "Favorites",
+    "all": "All",
+    "notFavorites": "Not Favorites"
   }
 }
