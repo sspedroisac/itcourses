@@ -2,6 +2,7 @@
 import Logo from "../Logo";
 import Button from "../Button";
 import { Link } from "@/i18n/navigation";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 // === Utils ===
 import { getTranslations } from "next-intl/server";
@@ -16,9 +17,15 @@ export default async function Header() {
         <Link href="/">
           <Logo />
         </Link>
-        <Link href="/courses">
-          <Button label={t("cta")} className="bg-olive-900 hover:opacity-85" />
-        </Link>
+        <div className="flex items-center gap-4">
+          <LanguageSwitcher />
+          <Link href="/courses">
+            <Button
+              label={t("cta")}
+              className="bg-olive-900 hover:opacity-85"
+            />
+          </Link>
+        </div>
       </div>
     </header>
   );
