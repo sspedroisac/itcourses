@@ -68,8 +68,8 @@ export default function SearchCourses({ courses }: SearchCoursesProps) {
 
   return (
     <div>
-      <div className="flex items-center relative gap-4">
-        <span className="text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2">
+      <div className="flex items-center relative gap-4 flex-col md:flex-row">
+        <span className="text-gray-500 absolute left-3 top-[22] md:top-1/2 transform -translate-y-1/2">
           <Search />
         </span>
         <input
@@ -77,9 +77,13 @@ export default function SearchCourses({ courses }: SearchCoursesProps) {
           value={searchQuery}
           type="text"
           placeholder={t("searchPlaceholder")}
-          className="w-full rounded border border-gray-300 bg-white py-2 pl-14 pr-4 text-gray-700"
+          className="w-full rounded border border-gray-200 bg-white py-2 pl-14 pr-4 text-gray-700"
         />
-        <Button label={t("searchButton")} onClick={handleSearchSubmit} />
+        <Button
+          label={t("searchButton")}
+          onClick={handleSearchSubmit}
+          className="w-full md:w-fit"
+        />
       </div>
       <div className="flex flex-col gap-6 mt-6">{renderCourses()}</div>
     </div>

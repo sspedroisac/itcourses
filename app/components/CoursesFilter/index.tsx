@@ -1,8 +1,8 @@
 "use client";
 
 // === Components ===
-import Button from "../Button";
 import RadioButton from "../RadioButton";
+import Collapse from "../Collapse";
 
 // === Utils ===
 import { useState, useEffect } from "react";
@@ -44,16 +44,12 @@ export default function CoursesFilter({ className }: CoursesFilterProps) {
     },
   ];
 
-  const clearAllFilters = () => {
-    setSelectedFavorites(null);
-  };
-
   const renderFilterSections = () => {
     return filterSections.map((section, index) => (
       <div
         key={section.title}
         className={twMerge(
-          "mt-12",
+          "mt-2",
           index < filterSections.length - 1 ? bottomBorderClass : "",
         )}
       >
@@ -90,13 +86,10 @@ export default function CoursesFilter({ className }: CoursesFilterProps) {
   }, [selectedFavorites]);
 
   return (
-    <div className={className}>
-      <div className="flex items-center justify-between">
-        <span className="opacity-50">{t("filters")}</span>
-        <Button label={t("clearAll")} type="text" onClick={clearAllFilters} />
-      </div>
-
-      {renderFilterSections()}
+    <div className={twMerge("", className)}>
+      <Collapse title={t("filters")} className="mb-6" defaultOpen={true}>
+        {renderFilterSections()}
+      </Collapse>
     </div>
   );
 }

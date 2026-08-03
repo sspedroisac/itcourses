@@ -36,8 +36,8 @@ export default function CourseCard({
   return (
     <Link
       href={{
-        pathname: "/courses/[slug]",
-        params: { slug },
+        pathname: "/courses/[slug]/[class]",
+        params: { slug, class: "index" },
       }}
     >
       <div className="border border-olive-200 p-4 rounded flex flex-col gap-4 shadow-2xs">

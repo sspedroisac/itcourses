@@ -11,9 +11,9 @@ export default function Footer() {
     <footer className="bg-gray-900 py-8">
       <div className="max-w-site-w mx-auto px-site-px flex flex-col items-center gap-4">
         <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div>
+          <div className="flex flex-col items-center sm:items-start gap-2">
             <Logo iconClassName="text-white" titleClassName="text-white" />
-            <p className="text-white opacity-70 text-sm mt-4">
+            <p className="text-white opacity-70 text-sm mt-4 mb-12 sm:mb-0">
               &copy; {new Date().getFullYear()} Pedro Isac • Open Source (MIT)
             </p>
           </div>

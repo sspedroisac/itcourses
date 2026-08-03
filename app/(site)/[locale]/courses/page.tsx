@@ -23,9 +23,9 @@ export default async function ExplorePage() {
       }
     >
       <div>
-        <SectionWrapper>
-          <div className="flex gap-12 min-h-[76vh]">
-            <div className="w-3/4">
+        <SectionWrapper classNameInner="pt-12">
+          <div className="flex justify-end flex-col-reverse md:flex-row gap-12 min-h-[76vh]">
+            <div className="w-full md:w-3/4">
               <div>
                 <h2 className="font-bold text-olive-900 text-2xl">
                   {t("title")}
@@ -33,12 +33,16 @@ export default async function ExplorePage() {
                 <p className="mt-2 text-gray-500">{t("description")}</p>
               </div>
 
+              <div className="w-full mt-6 md:hidden">
+                <CoursesFilter />
+              </div>
+
               <div className="mt-6">
                 <SearchCourses courses={courses} />
               </div>
             </div>
 
-            <div className="w-1/4 border-l border-gray-200 pl-8">
+            <div className="w-1/4 border-l border-gray-200 pl-8 hidden md:block">
               <CoursesFilter />
             </div>
           </div>

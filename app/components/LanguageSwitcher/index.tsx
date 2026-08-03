@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
   }
 
   const optionsClass =
-    "bg-white text-black px-2 py-1 hover:bg-gray-200 w-[180px] text-left flex cursor-pointer no-wrap";
+    "bg-white text-black px-2 py-1 hover:bg-gray-200 w-[88px] text-left flex cursor-pointer no-wrap";
 
   const trigger = (
     <div className="cursor-pointer">

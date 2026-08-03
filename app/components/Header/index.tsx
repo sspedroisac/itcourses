@@ -22,7 +22,7 @@ export default async function Header() {
           <Link href="/courses">
             <Button
               label={t("cta")}
-              className="bg-olive-900 hover:opacity-85"
+              className="bg-olive-900 hover:opacity-85 hidden md:block"
             />
           </Link>
         </div>

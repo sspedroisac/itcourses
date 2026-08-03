@@ -25,6 +25,7 @@ export async function getCourses(query?: string, lang: string = "en") {
         title: courseData.title,
         totalClassesCount: getTotalClassesCount(courseData.modules),
         modulesCount: courseData.modules.length,
+        modules: courseData.modules,
       };
     }),
   );

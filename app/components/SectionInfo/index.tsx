@@ -15,16 +15,22 @@ export default function SectionInfo({
 }: SectionInfoProps) {
   return (
     <section className="bg-background text-olive">
-      <div className="flex justify-between items-end">
+      <div className="flex flex-col justify-between items-center md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl">
-          <h1 className="text-xl font-bold">{title}</h1>
-          <p className="opacity-70 line-height-6 mt-2">{description}</p>
+          <h1 className="text-xl font-bold text-center md:text-left">
+            {title}
+          </h1>
+          <p className="opacity-70 line-height-6 mt-2 text-center md:text-left">
+            {description}
+          </p>
         </div>
 
         {showLink && (
           <Link
-            href={linkHref || "/"}
-            className="flex items-center gap-2 text-primary"
+            href={{
+              pathname: linkHref || "/",
+            }}
+            className="flex items-center gap-2 text-primary mt-4 md:mt-0 hover:opacity-85"
           >
             {linkText} <ArrowRightIcon className="w-4 h-4" />
           </Link>

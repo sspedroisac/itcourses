@@ -31,10 +31,13 @@
     "searchButton": "Search"
   },
   "coursesFilter": {
-    "filters": "FILTERS",
-    "clearAll": "Clear All",
+    "filters": "Filters",
+    "clearAll": "Clear",
     "favorites": "Favorites",
     "all": "All",
     "notFavorites": "Not Favorites"
+  },
+  "dictionary": {
+    "modules": "Modules"
   }
 }

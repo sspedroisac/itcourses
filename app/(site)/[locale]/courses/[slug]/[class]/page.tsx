@@ -1,10 +1,26 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 // === Components ===
 import SectionWrapper from "../../../../../components/SectionWrapper";
 import CourseContent from "../../../../../components/CourseContent";
 import CourseModulesCheckList from "../../../../../components/CourseModulesCheckList";
 
 // === Utils ===
-import { getCourse } from "../../../../../lib/courses";
+import { getCourse, getCourses } from "../../../../../lib/courses";
+
+// === Generate Static Params ===
+export async function generateStaticParams() {
+  const courses = await getCourses();
+
+  return courses.flatMap((course) =>
+    course.modules.flatMap((module: { classes: any[] }) =>
+      module.classes.map((c) => ({
+        slug: course.slug,
+        class: c.slug,
+      })),
+    ),
+  );
+}
 
 // === Page ===
 export default async function ClassPage({
@@ -16,13 +32,13 @@ export default async function ClassPage({
   const course = await getCourse(slug, locale);
 
   return (
-    <SectionWrapper>
-      <div className="flex gap-12 min-h-[75vh]">
-        <div className="w-3/4">
+    <SectionWrapper classNameInner="pt-12">
+      <div className="flex gap-6 lg:gap-12 min-h-[75vh] flex-col-reverse lg:flex-row justify-end">
+        <div className="w-full lg:w-3/4">
           <CourseContent slug={slug} slugClass={slugClass} lang={locale} />
         </div>
 
-        <div className="w-1/4">
+        <div className="w-full lg:w-1/4">
           <CourseModulesCheckList
             modules={course.modules}
             slug={slug}

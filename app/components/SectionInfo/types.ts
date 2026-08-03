@@ -3,5 +3,5 @@ export type SectionInfoProps = {
   description?: string;
   showLink?: boolean;
   linkText?: string;
-  linkHref?: string;
+  linkHref?: "/" | "/courses";
 };
