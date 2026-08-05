@@ -5,14 +5,21 @@ import SearchCourses from "../../../components/SearchCourses";
 
 // === Utils ===
 import { getCourses } from "../../../lib/courses";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 
 // === Page ===
-export default async function ExplorePage() {
-  const locale = await getLocale();
+export default async function ExplorePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const courses = await getCourses("", locale);
-  const t = await getTranslations("coursesPage");
+  const t = await getTranslations({
+    locale,
+    namespace: "coursesPage",
+  });
 
   return (
     <Suspense

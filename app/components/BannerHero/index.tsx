@@ -11,8 +11,11 @@ import siteConfig from "../../config/site";
 import { getTranslations } from "next-intl/server";
 
 // === Component ===
-export default async function BannerHero() {
-  const t = await getTranslations("bannerHero");
+export default async function BannerHero({ locale }: { locale: string }) {
+  const t = await getTranslations({
+    locale,
+    namespace: "bannerHero",
+  });
 
   return (
     <div className="w-full border-b border-b-olive-200 py-12 px-site-px bg-[radial-gradient(circle_at_0%_0%,theme(colors.blue.700/.0)_0%,transparent_0%),radial-gradient(circle_at_85%_15%,theme(colors.blue.700/.25)_0%,transparent_10%),radial-gradient(circle_at_40%_40%,theme(colors.blue.700/.10)_0%,transparent_40%),radial-gradient(circle_at_10%_10%,theme(colors.blue.700/.10)_0%,transparent_10%)]">

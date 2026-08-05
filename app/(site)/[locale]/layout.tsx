@@ -1,25 +1,47 @@
-import type { Metadata } from "next";
+// === Components ===
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+
+// === Utils ===
+import type { Metadata } from "next";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import "../../globals.css";
 
+// === Metadata ===
 export const metadata: Metadata = {
   title: "IT Courses | A platform for IT courses and tutorials",
   description: "A platform for IT courses and tutorials.",
 };
 
-export default async function RootLayout({
+// === SSG ===
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+// === Layout ===
+export default async function Layout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   const messages = await getMessages();
 
   return (
-    <html className="h-full antialiased">
-      <body className="min-h-full flex flex-col">
+    <html lang={locale}>
+      <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

@@ -6,7 +6,27 @@ import CourseContent from "../../../../../components/CourseContent";
 import CourseModulesCheckList from "../../../../../components/CourseModulesCheckList";
 
 // === Utils ===
-import { getCourse } from "../../../../../lib/courses";
+import { getCourse, getCourses } from "../../../../../lib/courses";
+import { routing } from "@/i18n/routing";
+
+// === SSG ===
+export async function generateStaticParams() {
+  return routing.locales.flatMap((locale) =>
+    (async () => {
+      const courses = await getCourses("", locale);
+
+      return courses.flatMap((course) =>
+        course.modules.flatMap((module: any) =>
+          module.classes.map((courseClass: any) => ({
+            locale,
+            slug: course.slug,
+            class: courseClass.slug,
+          })),
+        ),
+      );
+    })(),
+  );
+}
 
 // === Page ===
 export default async function ClassPage({

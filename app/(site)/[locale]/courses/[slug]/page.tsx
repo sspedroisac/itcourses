@@ -1,12 +1,12 @@
 // === Utils ===
 import { redirect } from "next/navigation";
 
-// === Component ===
+// === Page ===
 export default async function CoursePage({
   params,
 }: {
-  params: Promise<{ slug: string; class: string }>;
+  params: Promise<{ slug: string; class: string; locale: string }>;
 }) {
-  const { slug } = await params;
-  return redirect(`/courses/${slug}/index`);
+  const { slug, locale } = await params;
+  return redirect(`/${locale}/courses/${slug}/index`);
 }

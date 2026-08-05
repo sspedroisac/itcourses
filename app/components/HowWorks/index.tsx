@@ -8,8 +8,11 @@ import SectionWrapper from "../SectionWrapper";
 import { getTranslations } from "next-intl/server";
 
 // === Component ===
-export default async function HowWorks() {
-  const t = await getTranslations("howWorks");
+export default async function HowWorks({ locale }: { locale: string }) {
+  const t = await getTranslations({
+    locale,
+    namespace: "howWorks",
+  });
 
   const steps = [
     {
