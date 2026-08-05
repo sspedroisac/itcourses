@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/set-state-in-effect */
+
 "use client";
 
 // === Components ===
@@ -7,7 +9,7 @@ import { Link } from "@/i18n/navigation";
 import Collapse from "../Collapse";
 
 // === Utils ===
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CourseModulesCheckListProps } from "./types";
 import { toogleProgress, getProgress } from "../../lib/progress";
 import { useTranslations } from "next-intl";
@@ -20,7 +22,7 @@ export default function CourseModulesCheckList({
   totalClassesCount,
   showCourseCard = true,
 }: CourseModulesCheckListProps) {
-  const [progress, setProgress] = useState(getProgress(slug) || []);
+  const [progress, setProgress] = useState<string[]>([]);
   const t = useTranslations("dictionary");
 
   const handleCheckBoxChange = (classSlug: string) => {
@@ -58,6 +60,10 @@ export default function CourseModulesCheckList({
       </Collapse>
     ));
   };
+
+  useEffect(() => {
+    setProgress(getProgress(slug));
+  }, [slug]);
 
   return (
     <div>

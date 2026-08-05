@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/set-state-in-effect */
+
 "use client";
 
 // === Components ===
@@ -6,7 +8,7 @@ import { Book, Star } from "lucide-react";
 import ProgressBar from "../ProgressBar";
 
 // === Utils ===
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { CourseCardProps } from "./types";
 import { toogleFavoriteCourse, isCourseFavorite } from "../../lib/favorites";
@@ -22,7 +24,7 @@ export default function CourseCard({
   iconBgColor = "bg-blue-100",
   slug,
 }: CourseCardProps) {
-  const [isFavorite, setIsFavorite] = useState(isCourseFavorite(slug || ""));
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const handleFavoriteClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (slug) {
@@ -32,6 +34,10 @@ export default function CourseCard({
       setIsFavorite(!isFavorite);
     }
   };
+
+  useEffect(() => {
+    setIsFavorite(isCourseFavorite(slug || ""));
+  }, [slug]);
 
   return (
     <Link

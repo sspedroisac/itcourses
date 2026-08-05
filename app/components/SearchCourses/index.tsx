@@ -19,6 +19,7 @@ import { useTranslations } from "next-intl";
 export default function SearchCourses({ courses }: SearchCoursesProps) {
   const [filteredCourses, setFilteredCourses] = useState(courses);
   const [searchQuery, setSearchQuery] = useState("");
+  const [progressMap, setProgressMap] = useState<Record<string, number>>({});
   const t = useTranslations("searchCourses");
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -30,7 +31,7 @@ export default function SearchCourses({ courses }: SearchCoursesProps) {
         title={course.title}
         totalClassesCount={course.totalClassesCount}
         slug={course.slug}
-        progress={getProgressPercentage(course.slug, course.totalClassesCount)}
+        progress={progressMap[course.slug] ?? 0}
       />
     ));
   };
@@ -64,6 +65,17 @@ export default function SearchCourses({ courses }: SearchCoursesProps) {
     );
 
     setFilteredCourses(filtered);
+
+    const progress: Record<string, number> = {};
+
+    filtered.forEach((course) => {
+      progress[course.slug] = getProgressPercentage(
+        course.slug,
+        course.totalClassesCount,
+      );
+    });
+
+    setProgressMap(progress);
   }, [searchParams, courses]);
 
   return (
