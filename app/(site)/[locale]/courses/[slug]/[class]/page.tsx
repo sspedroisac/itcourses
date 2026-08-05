@@ -6,21 +6,7 @@ import CourseContent from "../../../../../components/CourseContent";
 import CourseModulesCheckList from "../../../../../components/CourseModulesCheckList";
 
 // === Utils ===
-import { getCourse, getCourses } from "../../../../../lib/courses";
-
-// === Generate Static Params ===
-export async function generateStaticParams() {
-  const courses = await getCourses();
-
-  return courses.flatMap((course) =>
-    course.modules.flatMap((module: { classes: any[] }) =>
-      module.classes.map((c) => ({
-        slug: course.slug,
-        class: c.slug,
-      })),
-    ),
-  );
-}
+import { getCourse } from "../../../../../lib/courses";
 
 // === Page ===
 export default async function ClassPage({
