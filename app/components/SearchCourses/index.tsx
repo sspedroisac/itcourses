@@ -9,7 +9,8 @@ import { Search } from "lucide-react";
 
 // === Utils ===
 import { useState, useEffect } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { SearchCoursesProps } from "./type";
 import { isCourseFavorite } from "../../lib/favorites";
 import { getProgressPercentage } from "../../lib/progress";
@@ -43,7 +44,10 @@ export default function SearchCourses({ courses }: SearchCoursesProps) {
   const handleSearchSubmit = () => {
     const params = new URLSearchParams(searchParams);
     params.set("query", searchQuery);
-    router.replace(`/courses?${params.toString()}`);
+    router.replace({
+      pathname: "/courses",
+      query: Object.fromEntries(params.entries()),
+    });
   };
 
   useEffect(() => {

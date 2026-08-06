@@ -8,7 +8,8 @@ import Collapse from "../Collapse";
 import { useState, useEffect } from "react";
 import { CoursesFilterProps } from "./types";
 import { twMerge } from "tailwind-merge";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 // === Component ===
@@ -82,7 +83,10 @@ export default function CoursesFilter({ className }: CoursesFilterProps) {
       params.delete("favorite");
     }
 
-    router.replace(`/courses?${params.toString()}`);
+    router.replace({
+      pathname: "/courses",
+      query: Object.fromEntries(params.entries()),
+    });
   }, [selectedFavorites]);
 
   return (
