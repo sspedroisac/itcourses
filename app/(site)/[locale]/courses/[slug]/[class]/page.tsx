@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 // === Components ===
-import SectionWrapper from "../../../../../components/SectionWrapper";
 import CourseContent from "../../../../../components/CourseContent";
-import CourseModulesCheckList from "../../../../../components/CourseModulesCheckList";
 
 // === Utils ===
-import { getCourse, getCourses } from "../../../../../lib/courses";
+import { getCourses } from "../../../../../lib/courses";
 import { routing } from "@/i18n/routing";
 
 // === SSG ===
 export async function generateStaticParams() {
-  return routing.locales.flatMap((locale) =>
-    (async () => {
-      const courses = await getCourses("", locale);
+  const params = [];
 
-      return courses.flatMap((course) =>
+  for (const locale of routing.locales) {
+    const courses = await getCourses("", locale);
+
+    params.push(
+      ...courses.flatMap((course) =>
         course.modules.flatMap((module: any) =>
           module.classes.map((courseClass: any) => ({
             locale,
@@ -23,36 +23,24 @@ export async function generateStaticParams() {
             class: courseClass.slug,
           })),
         ),
-      );
-    })(),
-  );
+      ),
+    );
+  }
+
+  return params;
 }
 
 // === Page ===
 export default async function ClassPage({
   params,
 }: {
-  params: Promise<{ slug: string; class: string; locale: string }>;
+  params: Promise<{
+    slug: string;
+    class: string;
+    locale: string;
+  }>;
 }) {
   const { slug, class: slugClass, locale } = await params;
-  const course = await getCourse(slug, locale);
 
-  return (
-    <SectionWrapper classNameInner="pt-12">
-      <div className="flex gap-6 lg:gap-12 min-h-[75vh] flex-col-reverse lg:flex-row justify-end">
-        <div className="w-full lg:w-3/4">
-          <CourseContent slug={slug} slugClass={slugClass} lang={locale} />
-        </div>
-
-        <div className="w-full lg:w-1/4">
-          <CourseModulesCheckList
-            modules={course.modules}
-            slug={slug}
-            totalClassesCount={course.totalClassesCount}
-            title={course.title}
-          />
-        </div>
-      </div>
-    </SectionWrapper>
-  );
+  return <CourseContent slug={slug} slugClass={slugClass} locale={locale} />;
 }

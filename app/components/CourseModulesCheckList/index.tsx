@@ -48,7 +48,7 @@ export default function CourseModulesCheckList({
               />
               <Link
                 href={{
-                  pathname: `/courses/[slug]/[class]`,
+                  pathname: "/courses/[slug]/[class]",
                   params: { slug, class: classItem.slug },
                 }}
               >
