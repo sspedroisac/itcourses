@@ -22,7 +22,7 @@ export default async function CourseLayout({
 
   return (
     <SectionWrapper classNameInner="pt-12">
-      <div className="flex gap-6 lg:gap-12 min-h-[75vh] flex-col-reverse lg:flex-row">
+      <div className="flex gap-6 lg:gap-12 min-h-[75vh] flex-col-reverse lg:flex-row justify-end">
         <div className="w-full lg:w-3/4">{children}</div>
 
         <div className="w-full lg:w-1/4">

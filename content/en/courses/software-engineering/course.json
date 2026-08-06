@@ -14,6 +14,19 @@
           "slug": "extreme-programming-xp"
         }
       ]
+    },
+    {
+      "title": "Software Testing",
+      "classes": [
+        {
+          "title": "Testing Levels",
+          "slug": "testing-levels"
+        },
+        {
+          "title": "Testing Types",
+          "slug": "testing-types"
+        }
+      ]
     }
   ]
 }
