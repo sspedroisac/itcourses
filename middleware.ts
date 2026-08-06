@@ -3,7 +3,7 @@ import { routing } from "./i18n/routing";
 
 export default createMiddleware(routing);
 
-export const runtime = "edge";
+export const runtime = "experimental-edge";
 
 export const config = {
   matcher: ["/((?!api|_next|.*\\..*).*)"],
