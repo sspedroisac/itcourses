@@ -6,12 +6,28 @@
       "title": "Desenvolvimento Ágil",
       "classes": [
         {
+          "title": "Manifesto Ágil",
+          "slug": "manifesto-agil"
+        },
+        {
+          "title": "Introdução ao Desenvolvimento Ágil",
+          "slug": "introducao-ao-desenvolvimento-agil"
+        },
+        {
           "title": "Scrum",
           "slug": "scrum"
         },
         {
           "title": "Extreme Programming (XP)",
           "slug": "extreme-programming-xp"
+        },
+        {
+          "title": "Kanban",
+          "slug": "kanban"
+        },
+        {
+          "title": "Lean Software Development",
+          "slug": "lean-software-development"
         }
       ]
     },
@@ -19,12 +35,282 @@
       "title": "Testes de Software",
       "classes": [
         {
+          "title": "Introdução aos Testes de Software",
+          "slug": "introducao-aos-testes-de-software"
+        },
+        {
           "title": "Níveis de Testes",
           "slug": "niveis-de-testes"
         },
         {
           "title": "Tipos de Testes",
           "slug": "tipos-de-testes"
+        },
+        {
+          "title": "Test-Driven Development (TDD)",
+          "slug": "test-driven-development-tdd"
+        },
+        {
+          "title": "Behavior-Driven Development (BDD)",
+          "slug": "behavior-driven-development-bdd"
+        },
+        {
+          "title": "Mocks, Stubs e Fakes",
+          "slug": "mocks-stubs-e-fakes"
+        }
+      ]
+    },
+    {
+      "title": "Engenharia de Requisitos",
+      "classes": [
+        {
+          "title": "Introdução à Engenharia de Requisitos",
+          "slug": "introducao-a-engenharia-de-requisitos"
+        },
+        {
+          "title": "Requisitos Funcionais e Não Funcionais",
+          "slug": "requisitos-funcionais-e-nao-funcionais"
+        },
+        {
+          "title": "Elicitação de Requisitos",
+          "slug": "elicitacao-de-requisitos"
+        },
+        {
+          "title": "Análise e Especificação de Requisitos",
+          "slug": "analise-e-especificacao-de-requisitos"
+        },
+        {
+          "title": "Validação de Requisitos",
+          "slug": "validacao-de-requisitos"
+        },
+        {
+          "title": "Gerenciamento de Requisitos",
+          "slug": "gerenciamento-de-requisitos"
+        }
+      ]
+    },
+    {
+      "title": "Processos de Desenvolvimento de Software",
+      "classes": [
+        {
+          "title": "Processos de Software",
+          "slug": "processos-de-software"
+        },
+        {
+          "title": "Modelo Cascata",
+          "slug": "modelo-cascata"
+        },
+        {
+          "title": "Modelo Incremental",
+          "slug": "modelo-incremental"
+        },
+        {
+          "title": "Modelo Espiral",
+          "slug": "modelo-espiral"
+        },
+        {
+          "title": "Prototipação",
+          "slug": "prototipacao"
+        }
+      ]
+    },
+    {
+      "title": "Modelagem de Software",
+      "classes": [
+        {
+          "title": "Introdução à UML",
+          "slug": "introducao-a-uml"
+        },
+        {
+          "title": "Diagrama de Casos de Uso",
+          "slug": "diagrama-de-casos-de-uso"
+        },
+        {
+          "title": "Diagrama de Classes",
+          "slug": "diagrama-de-classes"
+        },
+        {
+          "title": "Diagramas de Sequência",
+          "slug": "diagramas-de-sequencia"
+        },
+        {
+          "title": "Diagramas de Atividades",
+          "slug": "diagramas-de-atividades"
+        }
+      ]
+    },
+    {
+      "title": "Arquitetura de Software",
+      "classes": [
+        {
+          "title": "Introdução à Arquitetura de Software",
+          "slug": "introducao-a-arquitetura-de-software"
+        },
+        {
+          "title": "Princípios de Arquitetura",
+          "slug": "principios-de-arquitetura"
+        },
+        {
+          "title": "Acoplamento e Coesão",
+          "slug": "acoplamento-e-coesao"
+        },
+        {
+          "title": "Arquitetura em Camadas",
+          "slug": "arquitetura-em-camadas"
+        },
+        {
+          "title": "Arquitetura Hexagonal",
+          "slug": "arquitetura-hexagonal"
+        },
+        {
+          "title": "Microsserviços",
+          "slug": "microsservicos"
+        }
+      ]
+    },
+    {
+      "title": "Qualidade de Software",
+      "classes": [
+        {
+          "title": "Qualidade de Software",
+          "slug": "qualidade-de-software"
+        },
+        {
+          "title": "Características de Qualidade",
+          "slug": "caracteristicas-de-qualidade"
+        },
+        {
+          "title": "Métricas de Software",
+          "slug": "metricas-de-software"
+        },
+        {
+          "title": "Revisão de Código",
+          "slug": "revisao-de-codigo"
+        },
+        {
+          "title": "Débito Técnico",
+          "slug": "debito-tecnico"
+        }
+      ]
+    },
+    {
+      "title": "Gerenciamento de Projetos de Software",
+      "classes": [
+        {
+          "title": "Planejamento de Projetos",
+          "slug": "planejamento-de-projetos"
+        },
+        {
+          "title": "Estimativas de Software",
+          "slug": "estimativas-de-software"
+        },
+        {
+          "title": "Gerenciamento de Riscos",
+          "slug": "gerenciamento-de-riscos"
+        },
+        {
+          "title": "Gerenciamento de Configuração",
+          "slug": "gerenciamento-de-configuracao"
+        },
+        {
+          "title": "Controle de Versão",
+          "slug": "controle-de-versao"
+        }
+      ]
+    },
+    {
+      "title": "Manutenção de Software",
+      "classes": [
+        {
+          "title": "Introdução à Manutenção de Software",
+          "slug": "introducao-a-manutencao-de-software"
+        },
+        {
+          "title": "Tipos de Manutenção",
+          "slug": "tipos-de-manutencao"
+        },
+        {
+          "title": "Refatoração",
+          "slug": "refatoracao"
+        },
+        {
+          "title": "Evolução de Software",
+          "slug": "evolucao-de-software"
+        },
+        {
+          "title": "Legado e Modernização",
+          "slug": "legado-e-modernizacao"
+        }
+      ]
+    },
+    {
+      "title": "Integração e Entrega de Software",
+      "classes": [
+        {
+          "title": "Integração Contínua",
+          "slug": "integracao-continua"
+        },
+        {
+          "title": "Entrega Contínua",
+          "slug": "entrega-continua"
+        },
+        {
+          "title": "Deploy Contínuo",
+          "slug": "deploy-continuo"
+        },
+        {
+          "title": "Pipelines de CI/CD",
+          "slug": "pipelines-de-ci-cd"
+        },
+        {
+          "title": "DevOps",
+          "slug": "devops"
+        }
+      ]
+    },
+    {
+      "title": "Segurança de Software",
+      "classes": [
+        {
+          "title": "Introdução à Segurança de Software",
+          "slug": "introducao-a-seguranca-de-software"
+        },
+        {
+          "title": "Princípios de Segurança",
+          "slug": "principios-de-seguranca"
+        },
+        {
+          "title": "Autenticação e Autorização",
+          "slug": "autenticacao-e-autorizacao"
+        },
+        {
+          "title": "Principais Vulnerabilidades",
+          "slug": "principais-vulnerabilidades"
+        },
+        {
+          "title": "Desenvolvimento Seguro",
+          "slug": "desenvolvimento-seguro"
+        }
+      ]
+    },
+    {
+      "title": "Documentação de Software",
+      "classes": [
+        {
+          "title": "Importância da Documentação",
+          "slug": "importancia-da-documentacao"
+        },
+        {
+          "title": "Documentação de Código",
+          "slug": "documentacao-de-codigo"
+        },
+        {
+          "title": "Documentação de APIs",
+          "slug": "documentacao-de-apis"
+        },
+        {
+          "title": "ADRs",
+          "slug": "adrs"
         }
       ]
     }

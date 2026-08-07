@@ -81,7 +81,7 @@ export default function CourseModulesCheckList({
         title={t("modules")}
         className="mt-6 p-0"
         defaultOpen={true}
-        triggerClassName="border-b border-gray-200 p-4"
+        triggerClassName="border-b border-gray-200 p-4 h-auto"
       >
         {renderFilterSections()}
       </Collapse>

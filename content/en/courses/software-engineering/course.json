@@ -6,12 +6,28 @@
       "title": "Agile Development",
       "classes": [
         {
+          "title": "Agile Manifesto",
+          "slug": "agile-manifesto"
+        },
+        {
+          "title": "Introduction to Agile Development",
+          "slug": "introduction-to-agile-development"
+        },
+        {
           "title": "Scrum",
           "slug": "scrum"
         },
         {
           "title": "Extreme Programming (XP)",
           "slug": "extreme-programming-xp"
+        },
+        {
+          "title": "Kanban",
+          "slug": "kanban"
+        },
+        {
+          "title": "Lean Software Development",
+          "slug": "lean-software-development"
         }
       ]
     },
@@ -19,12 +35,282 @@
       "title": "Software Testing",
       "classes": [
         {
-          "title": "Testing Levels",
+          "title": "Introduction to Software Testing",
+          "slug": "introduction-to-software-testing"
+        },
+        {
+          "title": "Levels of Testing",
           "slug": "testing-levels"
         },
         {
-          "title": "Testing Types",
+          "title": "Types of Testing",
           "slug": "testing-types"
+        },
+        {
+          "title": "Test-Driven Development (TDD)",
+          "slug": "test-driven-development-tdd"
+        },
+        {
+          "title": "Behavior-Driven Development (BDD)",
+          "slug": "behavior-driven-development-bdd"
+        },
+        {
+          "title": "Mocks, Stubs, and Fakes",
+          "slug": "mocks-stubs-and-fakes"
+        }
+      ]
+    },
+    {
+      "title": "Requirements Engineering",
+      "classes": [
+        {
+          "title": "Introduction to Requirements Engineering",
+          "slug": "introduction-to-requirements-engineering"
+        },
+        {
+          "title": "Functional and Non-Functional Requirements",
+          "slug": "functional-and-non-functional-requirements"
+        },
+        {
+          "title": "Requirements Elicitation",
+          "slug": "requirements-elicitation"
+        },
+        {
+          "title": "Requirements Analysis and Specification",
+          "slug": "requirements-analysis-and-specification"
+        },
+        {
+          "title": "Requirements Validation",
+          "slug": "requirements-validation"
+        },
+        {
+          "title": "Requirements Management",
+          "slug": "requirements-management"
+        }
+      ]
+    },
+    {
+      "title": "Software Development Processes",
+      "classes": [
+        {
+          "title": "Software Processes",
+          "slug": "software-processes"
+        },
+        {
+          "title": "Waterfall Model",
+          "slug": "waterfall-model"
+        },
+        {
+          "title": "Incremental Model",
+          "slug": "incremental-model"
+        },
+        {
+          "title": "Spiral Model",
+          "slug": "spiral-model"
+        },
+        {
+          "title": "Prototyping",
+          "slug": "prototyping"
+        }
+      ]
+    },
+    {
+      "title": "Software Modeling",
+      "classes": [
+        {
+          "title": "Introduction to UML",
+          "slug": "introduction-to-uml"
+        },
+        {
+          "title": "Use Case Diagrams",
+          "slug": "use-case-diagrams"
+        },
+        {
+          "title": "Class Diagrams",
+          "slug": "class-diagrams"
+        },
+        {
+          "title": "Sequence Diagrams",
+          "slug": "sequence-diagrams"
+        },
+        {
+          "title": "Activity Diagrams",
+          "slug": "activity-diagrams"
+        }
+      ]
+    },
+    {
+      "title": "Software Architecture",
+      "classes": [
+        {
+          "title": "Introduction to Software Architecture",
+          "slug": "introduction-to-software-architecture"
+        },
+        {
+          "title": "Architecture Principles",
+          "slug": "architecture-principles"
+        },
+        {
+          "title": "Coupling and Cohesion",
+          "slug": "coupling-and-cohesion"
+        },
+        {
+          "title": "Layered Architecture",
+          "slug": "layered-architecture"
+        },
+        {
+          "title": "Hexagonal Architecture",
+          "slug": "hexagonal-architecture"
+        },
+        {
+          "title": "Microservices",
+          "slug": "microservices"
+        }
+      ]
+    },
+    {
+      "title": "Software Quality",
+      "classes": [
+        {
+          "title": "Software Quality",
+          "slug": "software-quality"
+        },
+        {
+          "title": "Quality Characteristics",
+          "slug": "quality-characteristics"
+        },
+        {
+          "title": "Software Metrics",
+          "slug": "software-metrics"
+        },
+        {
+          "title": "Code Review",
+          "slug": "code-review"
+        },
+        {
+          "title": "Technical Debt",
+          "slug": "technical-debt"
+        }
+      ]
+    },
+    {
+      "title": "Software Project Management",
+      "classes": [
+        {
+          "title": "Project Planning",
+          "slug": "project-planning"
+        },
+        {
+          "title": "Software Estimation",
+          "slug": "software-estimation"
+        },
+        {
+          "title": "Risk Management",
+          "slug": "risk-management"
+        },
+        {
+          "title": "Configuration Management",
+          "slug": "configuration-management"
+        },
+        {
+          "title": "Version Control",
+          "slug": "version-control"
+        }
+      ]
+    },
+    {
+      "title": "Software Maintenance",
+      "classes": [
+        {
+          "title": "Introduction to Software Maintenance",
+          "slug": "introduction-to-software-maintenance"
+        },
+        {
+          "title": "Types of Maintenance",
+          "slug": "types-of-maintenance"
+        },
+        {
+          "title": "Refactoring",
+          "slug": "refactoring"
+        },
+        {
+          "title": "Software Evolution",
+          "slug": "software-evolution"
+        },
+        {
+          "title": "Legacy Systems and Modernization",
+          "slug": "legacy-systems-and-modernization"
+        }
+      ]
+    },
+    {
+      "title": "Software Integration and Delivery",
+      "classes": [
+        {
+          "title": "Continuous Integration",
+          "slug": "continuous-integration"
+        },
+        {
+          "title": "Continuous Delivery",
+          "slug": "continuous-delivery"
+        },
+        {
+          "title": "Continuous Deployment",
+          "slug": "continuous-deployment"
+        },
+        {
+          "title": "CI/CD Pipelines",
+          "slug": "ci-cd-pipelines"
+        },
+        {
+          "title": "DevOps",
+          "slug": "devops"
+        }
+      ]
+    },
+    {
+      "title": "Software Security",
+      "classes": [
+        {
+          "title": "Introduction to Software Security",
+          "slug": "introduction-to-software-security"
+        },
+        {
+          "title": "Security Principles",
+          "slug": "security-principles"
+        },
+        {
+          "title": "Authentication and Authorization",
+          "slug": "authentication-and-authorization"
+        },
+        {
+          "title": "Common Vulnerabilities",
+          "slug": "common-vulnerabilities"
+        },
+        {
+          "title": "Secure Software Development",
+          "slug": "secure-software-development"
+        }
+      ]
+    },
+    {
+      "title": "Software Documentation",
+      "classes": [
+        {
+          "title": "Importance of Documentation",
+          "slug": "importance-of-documentation"
+        },
+        {
+          "title": "Code Documentation",
+          "slug": "code-documentation"
+        },
+        {
+          "title": "API Documentation",
+          "slug": "api-documentation"
+        },
+        {
+          "title": "ADRs",
+          "slug": "adrs"
         }
       ]
     }

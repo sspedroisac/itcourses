@@ -31,7 +31,7 @@ export default function Collapse({
           icon={<ChevronDown />}
           type="text"
           className={twMerge(
-            "p-0 text-gray-500 hover:text-gray-700 flex justify-between w-full flex-row-reverse",
+            "p-0 text-gray-500 hover:text-gray-700 flex justify-between w-full flex-row-reverse text-left",
             triggerClassName,
           )}
           onClick={handleToggle}
@@ -40,7 +40,7 @@ export default function Collapse({
       <div
         className={twMerge(
           "overflow-hidden transition-all duration-300",
-          isOpen ? "max-h-96 mt-6" : "max-h-0 mt-0",
+          isOpen ? "max-h-[500vh] mt-6" : "max-h-0 mt-0",
         )}
       >
         {children}
