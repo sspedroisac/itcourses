@@ -15,12 +15,16 @@ export default async function CourseContent({
   const courseClass = await getClass(slug, slugClass, locale);
 
   return (
-    <div className="border border-gray-200 rounded p-4 shadow-2xs">
-      <article className="prose max-w-none">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-          {courseClass.content}
-        </ReactMarkdown>
-      </article>
+    <div className="border-b border-r border-gray-200 rounded pr-1 pb-1 shadow-2xs">
+      <div className="border-b border-r border-gray-200 rounded pr-1 pb-1">
+        <div className="border border-gray-200 rounded p-4">
+          <article className="prose max-w-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {courseClass.content}
+            </ReactMarkdown>
+          </article>
+        </div>
+      </div>
     </div>
   );
 }
