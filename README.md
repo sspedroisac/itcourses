@@ -12,6 +12,7 @@ The project is designed to make technical learning more organized and accessible
 * ✅ Lesson completion tracking
 * ⭐ Favorite courses
 * 💾 Progress and preferences stored locally in the browser
+* 🌎 Multilingual support (English and Portuguese - Brazil)
 * 📱 Responsive interface
 * 🚀 Static-friendly architecture
 
