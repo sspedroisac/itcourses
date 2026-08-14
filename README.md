@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 IT Courses - A Platform for IT Learning
 
-## Getting Started
+![IT Courses](./docs/banner.png)
 
-First, run the development server:
+**IT Courses** is an open-source platform for learning Information Technology through structured, concise, and practical courses.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project is designed to make technical learning more organized and accessible, allowing users to explore courses divided into modules and lessons while keeping track of their progress.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**[🌐 Visit IT Courses](https://itcourses.pedroisac.dev/)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* 📚 Courses organized into modules and lessons
+* ✅ Lesson completion tracking
+* ⭐ Favorite courses
+* 💾 Progress and preferences stored locally in the browser
+* 🌎 Multilingual support (English and Portuguese - Brazil)
+* 📱 Responsive interface
+* 🚀 Static-friendly architecture
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js) 
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the **MIT License**.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See the [LICENSE](LICENSE) file for more information.
