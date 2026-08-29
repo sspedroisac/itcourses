@@ -1,0 +1,384 @@
+{
+  "title": "Banco de Dados",
+  "slug": "banco-de-dados",
+  "modules": [
+    {
+      "title": "Fundamentos de Bancos de Dados",
+      "classes": [
+        {
+          "title": "Introdução aos Bancos de Dados",
+          "slug": "introducao-aos-bancos-de-dados"
+        },
+        {
+          "title": "Dados, Informação e Conhecimento",
+          "slug": "dados-informacao-e-conhecimento"
+        },
+        {
+          "title": "Banco de Dados, SGBD e Sistema de Banco de Dados",
+          "slug": "banco-de-dados-sgbd-e-sistema-de-banco-de-dados"
+        },
+        {
+          "title": "Características e Vantagens dos SGBDs",
+          "slug": "caracteristicas-e-vantagens-dos-sgbds"
+        },
+        {
+          "title": "Arquitetura de Bancos de Dados",
+          "slug": "arquitetura-de-bancos-de-dados"
+        },
+        {
+          "title": "Modelos de Dados",
+          "slug": "modelos-de-dados"
+        },
+        {
+          "title": "Tipos e Classificações de Bancos de Dados",
+          "slug": "tipos-e-classificacoes-de-bancos-de-dados"
+        }
+      ]
+    },
+    {
+      "title": "Modelo Relacional",
+      "classes": [
+        {
+          "title": "Conceitos do Modelo Relacional",
+          "slug": "conceitos-do-modelo-relacional"
+        },
+        {
+          "title": "Relações, Tuplas, Atributos e Domínios",
+          "slug": "relacoes-tuplas-atributos-e-dominios"
+        },
+        {
+          "title": "Esquemas, Instâncias e Metadados",
+          "slug": "esquemas-instancias-e-metadados"
+        },
+        {
+          "title": "Chaves Primárias e Candidatas",
+          "slug": "chaves-primarias-e-candidatas"
+        },
+        {
+          "title": "Chaves Estrangeiras e Integridade Referencial",
+          "slug": "chaves-estrangeiras-e-integridade-referencial"
+        },
+        {
+          "title": "Álgebra Relacional",
+          "slug": "algebra-relacional"
+        }
+      ]
+    },
+    {
+      "title": "Modelagem de Dados",
+      "classes": [
+        {
+          "title": "Entidades e Atributos",
+          "slug": "entidades-e-atributos"
+        },
+        {
+          "title": "Relacionamentos",
+          "slug": "relacionamentos"
+        },
+        {
+          "title": "Cardinalidade e Participação",
+          "slug": "cardinalidade-e-participacao"
+        },
+        {
+          "title": "Modelo Entidade-Relacionamento",
+          "slug": "modelo-entidade-relacionamento"
+        },
+        {
+          "title": "Modelo Entidade-Relacionamento Estendido",
+          "slug": "modelo-entidade-relacionamento-estendido"
+        },
+        {
+          "title": "Mapeamento do Modelo ER para o Modelo Relacional",
+          "slug": "mapeamento-do-modelo-er-para-o-modelo-relacional"
+        },
+        {
+          "title": "Dependências Funcionais",
+          "slug": "dependencias-funcionais"
+        },
+        {
+          "title": "Normalização: 1FN, 2FN e 3FN",
+          "slug": "normalizacao-1fn-2fn-e-3fn"
+        },
+        {
+          "title": "Desnormalização",
+          "slug": "desnormalizacao"
+        }
+      ]
+    },
+    {
+      "title": "SQL",
+      "classes": [
+        {
+          "title": "Classificação dos Comandos SQL: DDL, DML, DCL e TCL",
+          "slug": "classificacao-dos-comandos-sql-ddl-dml-dcl-e-tcl"
+        },
+        {
+          "title": "DDL: CREATE, ALTER, DROP e TRUNCATE",
+          "slug": "ddl-create-alter-drop-e-truncate"
+        },
+        {
+          "title": "DML: SELECT, INSERT, UPDATE e DELETE",
+          "slug": "dml-select-insert-update-e-delete"
+        },
+        {
+          "title": "DCL: GRANT e REVOKE",
+          "slug": "dcl-grant-e-revoke"
+        },
+        {
+          "title": "TCL: COMMIT, ROLLBACK e SAVEPOINT",
+          "slug": "tcl-commit-rollback-e-savepoint"
+        }
+      ]
+    },
+    {
+      "title": "Integridade, Transações e Concorrência",
+      "classes": [
+        {
+          "title": "Constraints",
+          "slug": "constraints"
+        },
+        {
+          "title": "Integridade de Domínio",
+          "slug": "integridade-de-dominio"
+        },
+        {
+          "title": "Integridade de Entidade",
+          "slug": "integridade-de-entidade"
+        },
+        {
+          "title": "Integridade Referencial",
+          "slug": "integridade-referencial"
+        },
+        {
+          "title": "Transações e Propriedades ACID",
+          "slug": "transacoes-e-propriedades-acid"
+        },
+        {
+          "title": "Estados e Operações de uma Transação",
+          "slug": "estados-e-operacoes-de-uma-transacao"
+        },
+        {
+          "title": "Concorrência e Anomalias",
+          "slug": "concorrencia-e-anomalias"
+        },
+        {
+          "title": "Serialização e Escalonamentos",
+          "slug": "serializacao-e-escalonamentos"
+        },
+        {
+          "title": "Níveis de Isolamento",
+          "slug": "niveis-de-isolamento"
+        },
+        {
+          "title": "Locks e Controle de Concorrência",
+          "slug": "locks-e-controle-de-concorrencia"
+        },
+        {
+          "title": "Deadlocks",
+          "slug": "deadlocks"
+        }
+      ]
+    },
+    {
+      "title": "Armazenamento, Índices e Otimização",
+      "classes": [
+        {
+          "title": "Armazenamento e Organização Física dos Dados",
+          "slug": "armazenamento-e-organizacao-fisica-dos-dados"
+        },
+        {
+          "title": "Páginas, Blocos e Registros",
+          "slug": "paginas-blocos-e-registros"
+        },
+        {
+          "title": "Índices",
+          "slug": "indices"
+        },
+        {
+          "title": "Árvores B e B+",
+          "slug": "arvores-b-e-b"
+        },
+        {
+          "title": "Hashing",
+          "slug": "hashing"
+        },
+        {
+          "title": "Índices Clusterizados e Não Clusterizados",
+          "slug": "indices-clusterizados-e-nao-clusterizados"
+        },
+        {
+          "title": "Planos de Execução",
+          "slug": "planos-de-execucao"
+        },
+        {
+          "title": "Otimização de Consultas",
+          "slug": "otimizacao-de-consultas"
+        },
+        {
+          "title": "Estatísticas e Custo de Consultas",
+          "slug": "estatisticas-e-custo-de-consultas"
+        }
+      ]
+    },
+    {
+      "title": "Administração, Segurança e Alta Disponibilidade",
+      "classes": [
+        {
+          "title": "Administração de Bancos de Dados",
+          "slug": "administracao-de-bancos-de-dados"
+        },
+        {
+          "title": "Usuários, Roles e Privilégios",
+          "slug": "usuarios-roles-e-privilegios"
+        },
+        {
+          "title": "Autenticação e Autorização",
+          "slug": "autenticacao-e-autorizacao"
+        },
+        {
+          "title": "Auditoria e Segurança",
+          "slug": "auditoria-e-seguranca"
+        },
+        {
+          "title": "Backup e Restore",
+          "slug": "backup-e-restore"
+        },
+        {
+          "title": "Replicação",
+          "slug": "replicacao"
+        },
+        {
+          "title": "Alta Disponibilidade",
+          "slug": "alta-disponibilidade"
+        },
+        {
+          "title": "Tolerância a Falhas e Recuperação",
+          "slug": "tolerancia-a-falhas-e-recuperacao"
+        },
+        {
+          "title": "Monitoramento e Performance",
+          "slug": "monitoramento-e-performance"
+        },
+        {
+          "title": "Migração e Evolução de Schemas",
+          "slug": "migracao-e-evolucao-de-schemas"
+        }
+      ]
+    },
+    {
+      "title": "NoSQL e Bancos Distribuídos",
+      "classes": [
+        {
+          "title": "Introdução aos Bancos NoSQL",
+          "slug": "introducao-aos-bancos-nosql"
+        },
+        {
+          "title": "Bancos de Documentos",
+          "slug": "bancos-de-documentos"
+        },
+        {
+          "title": "Bancos Chave-Valor",
+          "slug": "bancos-chave-valor"
+        },
+        {
+          "title": "Bancos Orientados a Colunas",
+          "slug": "bancos-orientados-a-colunas"
+        },
+        {
+          "title": "Bancos de Grafos",
+          "slug": "bancos-de-grafos"
+        },
+        {
+          "title": "Bancos de Séries Temporais",
+          "slug": "bancos-de-series-temporais"
+        },
+        {
+          "title": "SQL vs. NoSQL",
+          "slug": "sql-vs-nosql"
+        },
+        {
+          "title": "Consistência, Disponibilidade e Particionamento",
+          "slug": "consistencia-disponibilidade-e-particionamento"
+        },
+        {
+          "title": "Teorema CAP",
+          "slug": "teorema-cap"
+        },
+        {
+          "title": "Consistência Eventual",
+          "slug": "consistencia-eventual"
+        },
+        {
+          "title": "Bancos de Dados Distribuídos",
+          "slug": "bancos-de-dados-distribuidos"
+        }
+      ]
+    },
+    {
+      "title": "Data Warehouse e Engenharia de Dados",
+      "classes": [
+        {
+          "title": "OLTP e OLAP",
+          "slug": "oltp-e-olap"
+        },
+        {
+          "title": "Data Warehouse",
+          "slug": "data-warehouse"
+        },
+        {
+          "title": "Data Marts",
+          "slug": "data-marts"
+        },
+        {
+          "title": "Modelagem Dimensional",
+          "slug": "modelagem-dimensional"
+        },
+        {
+          "title": "Tabelas Fato e Dimensão",
+          "slug": "tabelas-fato-e-dimensao"
+        },
+        {
+          "title": "Esquema Estrela e Esquema Floco de Neve",
+          "slug": "esquema-estrela-e-esquema-floco-de-neve"
+        },
+        {
+          "title": "ETL e ELT",
+          "slug": "etl-e-elt"
+        },
+        {
+          "title": "Data Lakes e Lakehouses",
+          "slug": "data-lakes-e-lakehouses"
+        },
+        {
+          "title": "Qualidade e Integração de Dados",
+          "slug": "qualidade-e-integracao-de-dados"
+        }
+      ]
+    },
+    {
+      "title": "Governança e Conceitos Complementares",
+      "classes": [
+        {
+          "title": "Governança de Dados",
+          "slug": "governanca-de-dados"
+        },
+        {
+          "title": "Catálogo e Linhagem de Dados",
+          "slug": "catalogo-e-linhagem-de-dados"
+        },
+        {
+          "title": "Master Data Management",
+          "slug": "master-data-management"
+        },
+        {
+          "title": "Banco de Dados em Nuvem",
+          "slug": "banco-de-dados-em-nuvem"
+        },
+        {
+          "title": "Bancos de Dados como Serviço",
+          "slug": "bancos-de-dados-como-servico"
+        }
+      ]
+    }
+  ]
+}
