@@ -40,7 +40,7 @@ export default function Collapse({
       <div
         className={twMerge(
           "overflow-hidden transition-all duration-300",
-          isOpen ? "max-h-[500vh] mt-6" : "max-h-0 mt-0",
+          isOpen ? "max-h-[10000vh] mt-6" : "max-h-0 mt-0",
         )}
       >
         {children}
