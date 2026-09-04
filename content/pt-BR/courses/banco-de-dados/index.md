@@ -1,19 +1,9 @@
 # Banco de Dados
 
-## Módulo 1: Fundamentos de Bancos de Dados
+O curso de **Banco de Dados** apresenta os princípios, técnicas e práticas necessários para projetar, implementar, operar e evoluir sistemas de armazenamento de informações.
 
-Este módulo apresenta os conceitos iniciais de bancos de dados, incluindo a diferença entre dados, informação e conhecimento, a estrutura do sistema de banco de dados e as principais características dos SGBDs.
+Ao longo do curso, são abordados conceitos fundamentais de dados, sistemas de gerenciamento, modelagem relacional, SQL, integridade, transações, concorrência, armazenamento físico e otimização.
 
-A partir desses fundamentos, é possível compreender como os dados são armazenados, organizados, acessados e protegidos em aplicações reais.
+O curso também explora bancos NoSQL, sistemas distribuídos, processamento analítico, engenharia de dados, governança e soluções em nuvem. A abordagem conecta fundamentos teóricos a situações práticas encontradas no desenvolvimento e na operação de aplicações reais.
 
----
-
-## Conteúdo do módulo
-
-- Introdução aos Bancos de Dados;
-- Dados, Informação e Conhecimento;
-- Banco de Dados, SGBD e Sistema de Banco de Dados;
-- Características e Vantagens dos SGBDs;
-- Arquitetura de Bancos de Dados;
-- Modelos de Dados;
-- Tipos e Classificações de Bancos de Dados.
+Ao final, você estará preparado para tomar decisões mais conscientes sobre modelagem, consistência, segurança, performance, disponibilidade e qualidade dos dados.
