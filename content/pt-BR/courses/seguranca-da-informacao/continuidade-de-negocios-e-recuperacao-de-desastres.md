@@ -1,17 +1,35 @@
 # Continuidade de Negócios e Recuperação de Desastres
 
-## 1. Resiliência organizacional
+## 1. Continuidade e recuperação
 
-Continuidade de negócios mantém processos essenciais durante interrupções; recuperação de desastres restaura tecnologia, dados e infraestrutura após eventos graves. Elas se complementam: recuperar um servidor não basta se pagamentos, atendimento ou comunicação continuarem parados.
+Continuidade de negócios prepara a organização para manter processos essenciais durante interrupções. Recuperação de desastres concentra-se em restaurar tecnologia, dados e infraestrutura após falhas graves. As duas disciplinas se complementam: reativar um servidor não garante que atendimento, pagamentos, comunicação e fornecedores estejam prontos para operar.
 
-## 2. Planejamento baseado em impacto
+Um plano deve partir dos serviços e resultados necessários, não apenas de uma lista de equipamentos. Identifique processos críticos, pessoas responsáveis, dependências, alternativas temporárias e critérios para retornar à operação normal.
 
-Identifique processos críticos, dependências, responsáveis, RTO e RPO. Um serviço pode depender de pessoas, fornecedores, dados, rede e instalações; todos devem ser considerados para que o plano seja realista.
+## 2. Análise de impacto
 
-## 3. Estratégias
+Uma análise de impacto no negócio identifica consequências de interrupção ao longo do tempo e prioriza processos. Considere efeitos financeiros, operacionais, contratuais, regulatórios e sobre clientes. Determine dependências de dados, aplicações, conectividade, pessoas, instalações e fornecedores.
 
-Redundância, ambientes alternativos, procedimentos manuais, estoque de equipamentos e backups são opções. A escolha depende do impacto de parar, custo e tempo necessário para recuperar.
+RTO e RPO ajudam a expressar objetivos técnicos de recuperação: tempo máximo para restabelecer o serviço e perda de dados aceitável. Eles devem refletir necessidades do processo e ser viáveis com recursos e arquitetura disponíveis. Objetivos conflitantes entre áreas precisam ser resolvidos antes de uma emergência.
 
-## 4. Exercícios
+## 3. Estratégias de continuidade
 
-Planos precisam ser testados por simulações e exercícios técnicos. A prática revela contatos obsoletos, permissões ausentes e dependências esquecidas antes de uma emergência real. Registre resultados e acompanhe as correções.
+Opções incluem redundância, capacidade alternativa, procedimentos manuais, canais de comunicação secundários, equipamentos de reposição e fornecedores alternativos. Cada opção tem custo e limitações. Um procedimento manual, por exemplo, precisa de dados mínimos, autorização, treinamento e plano para reconciliar registros quando o sistema voltar.
+
+Priorize recursos segundo criticidade e dependências compartilhadas. Se vários processos dependem de uma única rede ou provedor, a redundância local pode não eliminar o ponto único de falha.
+
+## 4. Recuperação de tecnologia
+
+Planos técnicos devem definir sequência, responsáveis, acessos, cópias necessárias, dependências e validação. Antes de restaurar sistemas após incidente, confirme que a causa foi tratada e que o ambiente de destino está seguro. Teste integridade de dados, funcionamento da aplicação, permissões e comunicação com dependências.
+
+Procedimentos devem estar acessíveis quando sistemas corporativos estão indisponíveis e não podem depender de uma única pessoa. Contatos, credenciais de emergência e instruções precisam de proteção e revisão.
+
+## 5. Exercícios e melhoria
+
+Exercícios podem variar de revisão de contatos a simulação de decisões ou restauração técnica. Defina escopo, participantes, cenário, critérios de sucesso e limites operacionais. Um teste realista deve ser autorizado e cuidadosamente planejado para não interromper produção.
+
+Registre resultados, dificuldades e ações corretivas. Se o plano não atingiu RTO ou RPO, ajuste estratégia ou objetivos com aprovação; não altere os números apenas para aparentar sucesso. Repita exercícios após mudanças significativas.
+
+## 6. Síntese e aplicação
+
+Para um serviço fictício de atendimento indisponível, identifique processos, pessoas, sistemas, fornecedores e dados necessários. Proponha alternativa temporária e exercício que valide o plano. Continuidade é capacidade organizacional, não apenas cópia de segurança.

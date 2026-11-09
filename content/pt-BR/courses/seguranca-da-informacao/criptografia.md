@@ -1,21 +1,35 @@
 # Criptografia
 
-## 1. Papel da criptografia
+## 1. O que a criptografia protege
 
-Criptografia usa algoritmos e chaves para transformar dados legíveis em informação que só pode ser compreendida por entidades autorizadas. Ela reduz a exposição quando dados são interceptados, um disco é perdido ou uma cópia é acessada fora do fluxo esperado.
+Criptografia transforma dados legíveis em uma forma que não pode ser interpretada sem o material criptográfico apropriado. Ela ajuda a reduzir exposição quando dados são interceptados ou armazenados em meios que podem ser perdidos ou acessados indevidamente. A proteção depende de algoritmos consolidados, implementação correta, gestão de chaves e controles de acesso.
 
-## 2. Criptografia em trânsito e em repouso
+Criptografia não corrige dados incorretos, não decide quem deve ter acesso e não impede que uma pessoa autorizada copie a informação já decifrada. Deve ser usada junto de autorização, monitoramento e procedimentos de recuperação.
 
-Dados em trânsito devem usar protocolos seguros, como TLS, para proteger a comunicação entre navegador, API e serviços internos. Dados em repouso podem ser protegidos em discos, bancos de dados, backups e arquivos. Os dois cenários são complementares: uma conexão segura não protege uma cópia armazenada sem proteção.
+## 2. Dados em trânsito e em repouso
 
-## 3. Tipos e usos
+Dados **em trânsito** circulam entre navegador, aplicação e serviços. Protocolos seguros, como TLS configurado de modo adequado, ajudam a proteger comunicação e autenticar o serviço remoto. Uma conexão criptografada não garante que o destino seja legítimo se a pessoa foi direcionada a um serviço falso.
 
-Criptografia simétrica normalmente protege grandes volumes de dados com uma chave secreta. Criptografia assimétrica usa um par de chaves e é útil para troca segura de chaves, autenticação e assinaturas. Funções de hash têm outro propósito: verificar integridade ou armazenar senhas de forma adequada; não são reversíveis como uma cifra.
+Dados **em repouso** ficam em bancos, discos, dispositivos, arquivos e cópias de segurança. Criptografia de disco pode reduzir exposição em caso de perda física, enquanto criptografia em uma aplicação pode proteger dados em outras camadas. Escolha com base no modelo de ameaça e confirme quem controla as chaves.
+
+## 3. Cifras, chaves e hashes
+
+Criptografia simétrica usa uma chave secreta compartilhada e é eficiente para grandes volumes. Criptografia assimétrica usa um par de chaves relacionadas, frequentemente para autenticação, assinaturas ou estabelecimento de chaves. Protocolos modernos combinam técnicas para obter segurança e desempenho.
+
+Hash criptográfico produz um resumo de tamanho definido e não é projetado para ser revertido. Pode apoiar verificação de integridade. Armazenamento de senhas exige algoritmos específicos de derivação de chave, com salt e custo computacional apropriado; um hash rápido e simples não é suficiente.
+
+Assinaturas digitais permitem verificar integridade e vínculo com uma chave privada, conforme a infraestrutura de confiança utilizada. Não são sinônimo de criptografia de confidencialidade: um documento assinado pode continuar legível por qualquer pessoa.
 
 ## 4. Gestão de chaves
 
-O valor da criptografia depende da proteção das chaves. Limite acesso, separe chaves dos dados, registre seu uso, faça rotação quando necessária e planeje backup e recuperação. Uma chave exposta pode anular a proteção de todos os dados associados.
+Chaves devem ter propósito, proprietário, escopo de acesso e ciclo de vida. Armazene-as separadas dos dados que protegem, restrinja leitura e uso, registre operações relevantes e planeje rotação e revogação. Segredos não devem ser colocados no código ou em arquivos compartilhados.
 
-## 5. Limites e boas decisões
+Planeje também recuperação. Perder uma chave pode tornar dados inacessíveis; mantê-la disponível a todos pode tornar a criptografia ineficaz. Cofres e serviços de gestão de chaves ajudam, mas precisam de permissões e configurações revisadas.
 
-Criptografia não substitui autorização, backups ou validação de entrada. Ela também não impede que um usuário autorizado copie uma informação já visualizada. Use implementações e bibliotecas consolidadas; criar algoritmos próprios é uma fonte comum de falhas.
+## 5. Erros comuns
+
+Criar algoritmos próprios, reutilizar chaves sem controle, registrar segredos em logs e confundir codificação com criptografia são falhas recorrentes. Uma senha codificada em Base64 continua legível; TLS não substitui autorização; criptografia de backup não prova que o backup pode ser restaurado.
+
+## 6. Síntese e aplicação
+
+Para um serviço fictício que armazena arquivos e os transfere a uma aplicação, identifique controles para trânsito, repouso e chaves. Explique quem pode decifrar, como uma chave comprometida seria revogada e como dados seriam recuperados. A escolha de algoritmo é apenas uma parte do desenho.

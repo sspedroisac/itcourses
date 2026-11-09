@@ -1,23 +1,39 @@
 # Controles de Segurança
 
-## 1. O que são controles
+## 1. O que é um controle
 
-Controles de segurança são medidas que tratam riscos. Eles podem impedir um evento, revelar que ele está acontecendo, limitar seus efeitos ou permitir a recuperação. Um controle deve existir por uma razão clara, ligada a um cenário de risco.
+Um controle de segurança é uma medida criada para modificar um risco. Pode impedir um evento, detectá-lo, limitar suas consequências, facilitar a recuperação ou desencorajar uma ação indevida. Um controle efetivo está ligado a um cenário específico, tem proprietário, é mantido e produz evidência de funcionamento.
 
-## 2. Classificações úteis
+Controles não são apenas ferramentas. Uma aprovação de pagamento, um procedimento para revogar acessos, uma porta trancada e uma regra automatizada de autorização são controles com naturezas e responsabilidades diferentes.
 
-Pela natureza, controles podem ser **administrativos** (políticas, aprovações e treinamento), **técnicos** (MFA, criptografia e firewall) ou **físicos** (crachás e controle de acesso a salas). Pelo objetivo, podem ser preventivos, detectivos, corretivos, dissuasórios ou compensatórios.
+## 2. Tipos e finalidades
 
-Por exemplo, MFA é preventivo; um alerta de login incomum é detectivo; um backup testado é corretivo; e a revisão periódica de acessos pode detectar e corrigir permissões indevidas.
+Pela forma de implementação, controles podem ser:
+
+- **Administrativos:** políticas, responsabilidades, treinamento e gestão de mudanças;
+- **Técnicos:** autenticação, autorização, criptografia, filtragem e monitoramento;
+- **Físicos:** fechaduras, crachás, alarmes e proteção de equipamentos.
+
+Pela finalidade, podem ser preventivos, detectivos, corretivos, dissuasórios ou compensatórios. Uma revisão de acesso, por exemplo, pode detectar privilégios excessivos e iniciar sua remoção. Um backup apoia recuperação, mas não impede a exclusão original dos dados.
 
 ## 3. Defesa em profundidade
 
-Controles independentes reduzem a dependência de uma única barreira. Para proteger uma base de dados, uma organização pode combinar acesso por função, MFA, rede restrita, criptografia, registros de consulta e backups. Se uma credencial for roubada, os outros controles ainda podem impedir ou revelar o abuso.
+Como nenhum controle é perfeito, medidas complementares reduzem dependência de uma barreira. Para proteger um sistema administrativo, uma organização pode exigir MFA, conceder privilégios mínimos, restringir caminhos de rede, registrar ações, alertar sobre comportamentos incomuns e manter procedimentos para revogar sessões.
 
-## 4. Controles proporcionais
+As camadas devem ser compatíveis. Se um alerta não tem responsável ou uma conta de serviço pode desativá-lo, a proteção existe apenas no desenho. Defesa em profundidade também não justifica acumular controles sem propósito: complexidade excessiva pode gerar exceções, custos e erros operacionais.
 
-Nem todo ativo exige o mesmo nível de proteção. Um documento público não precisa dos mesmos controles de um banco de dados de clientes. A escolha deve equilibrar risco, custo, usabilidade e impacto operacional.
+## 4. Seleção proporcional
 
-## 5. Como verificar eficácia
+Considere criticidade do ativo, impacto potencial, exposição, requisitos aplicáveis, custo e facilidade de operação. Um dado público pode precisar de controle de integridade e disponibilidade, mas não de sigilo. Uma conta administrativa exige proteção mais forte que uma conta de leitura de documentação pública.
 
-Um controle só funciona se estiver configurado, mantido e testado. Defina um proprietário e uma evidência: por exemplo, relatório de contas sem MFA, teste de restauração ou revisão de regras de firewall. Controle não verificado é apenas uma suposição.
+Defina também como o controle se relaciona com o fluxo de trabalho. Um processo tão oneroso que as pessoas o contornam pode aumentar risco. Quando uma exceção for necessária, limite escopo e duração, aprove de forma apropriada e registre medidas compensatórias.
+
+## 5. Efetividade e evidências
+
+Para cada controle, responda: qual risco trata, quem o mantém, com que frequência é revisto e qual evidência demonstra sua operação? Evidências podem incluir resultados de testes, relatórios de cobertura, registros de aprovação ou restaurações executadas.
+
+Teste o controle em condições relevantes. Uma regra de acesso pode parecer correta no documento, mas falhar em uma rota alternativa. Uma rotina de backup pode terminar sem erro e ainda assim produzir dados incompletos. Verificação identifica essas diferenças entre intenção e resultado.
+
+## 6. Síntese e aplicação
+
+Para o cenário fictício de uma conta administrativa comprometida, proponha um controle preventivo, um detectivo e um de recuperação. Explique como cada um reduz risco, quem é responsável e qual evidência deve ser revista. Controles eficazes formam um sistema de trabalho, não uma lista de produtos.

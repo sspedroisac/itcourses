@@ -2,26 +2,42 @@
 
 ## 1. A tríade CIA
 
-A tríade CIA reúne os objetivos mais usados para avaliar a segurança de uma informação: **confidencialidade**, **integridade** e **disponibilidade**. Ela é uma ferramenta simples para transformar a pergunta “isto é seguro?” em questões verificáveis.
+Confidencialidade, integridade e disponibilidade — frequentemente abreviadas como CIA, pelas palavras inglesas *Confidentiality, Integrity, Availability* — são objetivos usados para analisar a proteção de informações e serviços. A tríade não é uma lista completa de requisitos, mas oferece um modelo útil para identificar o que pode falhar e quais controles são relevantes.
 
 ## 2. Confidencialidade
 
-Confidencialidade significa que somente entidades autorizadas podem conhecer uma informação. Um prontuário visível a qualquer funcionário, uma chave de API publicada no código ou uma conversa exibida em local público representam falhas desse objetivo.
+Confidencialidade significa que a informação só é conhecida ou acessada por entidades autorizadas, para finalidades permitidas. Uma exposição pode ocorrer por permissões excessivas, envio ao destinatário errado, perda de um dispositivo ou credenciais comprometidas.
 
-Controles típicos incluem classificação de dados, autenticação, autorização, criptografia e compartilhamento com destinatários específicos. É importante lembrar que criptografar não resolve permissões excessivas: se muitos usuários têm acesso à chave ou ao dado já aberto, a exposição continua existindo.
+Classificação de dados, autorização por função, autenticação forte, criptografia e compartilhamento controlado ajudam a proteger esse objetivo. Criptografia reduz exposição em determinados cenários, mas não impede que um usuário com acesso legítimo copie ou divulgue o conteúdo. É necessário limitar também quem pode abrir os dados e o que pode fazer com eles.
 
 ## 3. Integridade
 
-Integridade é a confiança de que a informação está correta, completa e não foi alterada indevidamente. Um preço modificado por engano, um log apagado ou uma atualização fraudulenta de conta comprometem a integridade.
+Integridade é a confiança de que dados e configurações permanecem corretos, completos e alterados somente por processos autorizados. Um valor financeiro modificado sem aprovação, um registro apagado ou uma atualização acidental de cadastro afetam a integridade.
 
-Validações, permissões de escrita, revisões, assinaturas digitais, versionamento e trilhas de auditoria ajudam a preservar esse objetivo. Backups também contribuem, pois permitem recuperar uma versão conhecida quando dados são corrompidos.
+Controles incluem validação de regras de negócio, permissões de escrita, revisão e aprovação de mudanças, versionamento, trilhas de auditoria e mecanismos criptográficos de verificação. Um hash pode ajudar a identificar alterações em um arquivo, mas não prova sozinho quem o criou ou se o conteúdo original era correto.
 
 ## 4. Disponibilidade
 
-Disponibilidade garante acesso a dados e serviços no momento necessário. Falhas de hardware, ataques de negação de serviço, erros de configuração e ransomware podem torná-los indisponíveis.
+Disponibilidade é a possibilidade de usar dados e serviços quando necessário. Falhas de equipamento, erros de implantação, interrupções de rede, dependência de fornecedor, falta de capacidade ou incidentes de segurança podem interromper um serviço.
 
-Redundância, capacidade adequada, monitoramento, backups testados e planos de recuperação reduzem interrupções. Disponibilidade não significa que todo sistema precisa funcionar sem parar; ela deve atender ao nível acordado para cada processo.
+Redundância, planejamento de capacidade, manutenção, monitoramento, cópias recuperáveis e procedimentos de continuidade contribuem para a disponibilidade. O objetivo adequado depende do processo: nem todo sistema precisa funcionar sem interrupção, mas níveis e tempos de recuperação devem ser conhecidos e acordados.
 
-## 5. Equilíbrio e exemplo
+## 5. Equilíbrio entre objetivos
 
-Bloquear todo acesso maximiza a confidencialidade, mas impede o trabalho. Manter uma cópia editável por todos facilita a disponibilidade, mas ameaça a integridade. Para um relatório financeiro, uma solução equilibrada pode usar acesso por função, histórico de alterações e cópias recuperáveis.
+Os objetivos podem entrar em tensão. Bloquear qualquer acesso protege contra divulgação, mas impede o trabalho. Permitir que todos alterem registros facilita a operação, mas ameaça a integridade. Replicar dados para muitas regiões pode melhorar disponibilidade, mas amplia as responsabilidades de proteção e gestão.
+
+Uma decisão de segurança deve explicitar o objetivo do controle, os custos e o risco residual. Para um relatório financeiro, por exemplo, acesso baseado em função protege confidencialidade; aprovação e histórico de mudanças apoiam integridade; cópias testadas ajudam na disponibilidade.
+
+## 6. Usando a tríade na análise
+
+Para cada ativo, pergunte:
+
+1. Quem pode consultar a informação e em quais circunstâncias?
+2. Quem pode criar, alterar ou excluir dados e como essas ações são verificadas?
+3. Qual interrupção é aceitável e como o serviço será restaurado?
+
+Uma única ocorrência pode afetar mais de um objetivo. Um ransomware pode impedir o acesso a arquivos e também alterar ou destruir informações. Uma exportação indevida afeta confidencialidade e pode ainda comprometer integridade se os dados forem modificados no processo.
+
+## 7. Síntese e aplicação
+
+A tríade ajuda a tornar requisitos abstratos verificáveis. Escolha um sistema fictício, descreva um cenário que ameace cada objetivo e associe um controle preventivo e um de detecção ou recuperação. Explique como verificar os controles sem utilizar dados reais. Uma resposta completa considera o equilíbrio operacional, em vez de maximizar um único objetivo.

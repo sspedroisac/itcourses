@@ -1,21 +1,33 @@
 # Validação de Entradas
 
-## 1. Dados externos não são confiáveis
+## 1. Entradas e limites de confiança
 
-Formulários, URLs, cookies, arquivos, cabeçalhos e integrações são entradas externas. Mesmo dados originados pela própria aplicação podem ter sido alterados no caminho. Portanto, valide antes de usá-los em uma operação sensível.
+Formulários, URLs, cabeçalhos, cookies, arquivos, integrações e mensagens entre serviços podem conter dados malformados ou manipulados. Trate dados recebidos como não confiáveis até que sejam verificados para o uso pretendido. Uma entrada produzida por outro componente da mesma organização também pode estar incorreta ou comprometida.
 
-## 2. Validação depende do contexto
+Validação deve refletir regras do domínio, não apenas uma lista de caracteres considerados suspeitos. Um campo quantidade pode exigir inteiro positivo dentro de uma faixa; um identificador pode exigir formato e existência válidos; um arquivo precisa de limites e tratamento específico.
 
-Um identificador numérico, um e-mail e um anexo possuem regras diferentes. Além disso, um valor seguro para exibir em uma página não é automaticamente seguro para uma consulta ao banco, um comando ou um caminho de arquivo. Cada destino exige uma defesa apropriada.
+## 2. Validação no servidor
 
-## 3. Permitir formatos conhecidos
+Validação no navegador melhora a experiência, mas pode ser alterada ou ignorada. O servidor deve repetir as verificações antes de tomar decisões. Não confie em campos ocultos, preços enviados pelo cliente ou controles visuais para garantir autorização.
 
-Sempre que possível, defina tipo, tamanho, faixa e formato permitidos. Uma lista de valores aceitos é mais robusta que tentar bloquear palavras ou caracteres perigosos, pois novos caminhos de abuso surgem continuamente.
+Defina comportamento para entradas inválidas: rejeite com mensagem segura, registre apenas o necessário e não execute parcialmente uma operação sensível. Erros devem ser úteis ao usuário legítimo sem revelar detalhes internos ou dados de outras pessoas.
 
-## 4. Controles complementares
+## 3. Validação e codificação são controles diferentes
 
-Use consultas parametrizadas, APIs que separem dados de comandos, codificação de saída, limites de tamanho, tratamento seguro de erros e permissões mínimas. Validação no navegador melhora a experiência, mas o servidor deve validar novamente porque o cliente pode ser manipulado.
+Um valor aceito para um campo não é automaticamente seguro para todos os destinos. Texto destinado a uma página deve ser codificado para o contexto de saída. Dados usados em consultas devem ser enviados por parâmetros, separando dados de instruções. Comandos do sistema e caminhos de arquivos exigem APIs e controles próprios.
 
-## 5. Exemplo
+Listas de formatos permitidos geralmente são mais confiáveis do que tentar remover sequências perigosas. Nenhuma lista genérica cobre todos os contextos; use bibliotecas e APIs que tratem corretamente o destino dos dados.
 
-Para upload de arquivos, valide tamanho, tipo esperado e conteúdo quando aplicável; armazene fora da área pública e gere nomes internos. Confiar somente na extensão enviada pelo navegador é insuficiente.
+## 4. Arquivos e uploads
+
+Para upload, limite tamanho e quantidade, valide o tipo esperado além da extensão declarada, armazene com nome interno e mantenha o arquivo fora de áreas executáveis ou diretamente públicas. Se houver necessidade de processamento, use ambiente e permissões apropriados.
+
+Considere também retenção e privacidade: arquivos podem conter dados pessoais ou metadados. Defina quem pode baixá-los, quanto tempo serão mantidos e como serão removidos.
+
+## 5. Validação de negócio
+
+Validade sintática não garante que uma operação faz sentido. Uma data pode estar no formato correto e ainda ser inválida para o processo; um usuário pode fornecer identificador bem formado para um recurso que não lhe pertence. Combine validação de dados com autorização e regras de negócio no servidor.
+
+## 6. Síntese e aplicação
+
+Para um formulário fictício com nome, quantidade e anexo, defina tipo, faixa, tamanho, regra de negócio, camada de validação e tratamento de saída. Indique o comportamento esperado para valores inválidos. Rejeitar dados de forma consistente deve preservar integridade sem expor detalhes sensíveis.

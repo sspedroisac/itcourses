@@ -1,25 +1,33 @@
 # Segurança de APIs e Segredos
 
-## 1. APIs são contratos expostos
+## 1. APIs como fronteiras de confiança
 
-APIs devem autenticar o cliente, autorizar cada operação, validar dados e retornar somente o necessário. Uma API “interna” também precisa de proteção: outros serviços podem ser comprometidos e a arquitetura pode mudar com o tempo.
+Uma API define operações que aplicações e serviços podem solicitar. Ser “interna” não a torna automaticamente confiável: credenciais podem ser comprometidas, redes mudam e serviços de terceiros podem ser afetados. Cada interface deve declarar o que aceita, quem pode usá-la e quais efeitos produz.
 
-## 2. Autenticação não é autorização
+Segurança de API combina autenticação, autorização por operação e recurso, validação, limites de uso, comunicação protegida e registros. Uma resposta deve conter apenas os dados necessários para a finalidade solicitada.
 
-Um token válido identifica uma integração, mas ainda é necessário verificar se aquele token pode executar a ação solicitada sobre aquele recurso. Use escopos específicos e evite tokens com acesso global quando uma permissão limitada resolve o caso.
+## 2. Autenticação e autorização
 
-## 3. Segredos
+Tokens, certificados ou outros mecanismos identificam o cliente, mas não concedem acesso ilimitado. Associe credenciais a escopos e recursos específicos, limite validade e permita revogação. A aplicação deve verificar autorização em cada solicitação, inclusive quando o identificador do objeto vem do cliente.
 
-Senhas, chaves e tokens não devem estar em repositórios, imagens de contêiner, documentação pública ou logs. Use um cofre de segredos, controle quem pode lê-los e faça rotação quando houver vazamento ou mudança de responsável.
+Para ações de alto impacto, considere aprovação, segregação de funções ou confirmação adicional. Limites de tamanho e taxa ajudam a evitar consumo imprevisto, mas devem ser definidos conforme comportamento legítimo e acompanhados de tratamento de erros consistente.
 
-## 4. Resiliência e visibilidade
+## 3. Proteção de segredos
 
-Limites de taxa e tamanho reduzem abuso e consumo inesperado. Registre autenticações, falhas, mudanças de credenciais e operações relevantes, mas filtre dados sensíveis. Mensagens de erro devem orientar o cliente sem revelar detalhes internos.
+Segredos incluem senhas, tokens, chaves privadas e credenciais de integração. Não os inclua em código, commits, imagens, documentação pública ou logs. Use um cofre ou mecanismo aprovado, limite quem pode consultar, registre acessos e estabeleça rotação e revogação.
 
-## 5. Checklist de design
+Se um segredo for exposto, trate-o como comprometido mesmo que não haja evidência de uso. Revogue ou rotacione, investigue onde foi copiado, atualize consumidores e remova o valor de locais acessíveis conforme procedimento. Apagar o texto do arquivo atual não invalida a credencial nem necessariamente remove seu histórico.
 
-- TLS em todas as comunicações;
-- Escopos e expiração apropriados para tokens;
-- Autorização por operação e recurso;
-- Validação de entradas e respostas mínimas;
-- Inventário de integrações e plano de rotação de segredos.
+## 4. Tokens e ciclo de vida
+
+Tokens devem ter emissor, audiência, finalidade, escopo e expiração adequados. Evite credenciais compartilhadas entre ambientes ou integrações distintas. Credenciais temporárias reduzem tempo de exposição quando há suporte e operação apropriada.
+
+Planeje renovação e contingência: uma rotação sem coordenação pode interromper serviços; uma exceção para evitar interrupção pode deixar o segredo antigo ativo. Mantenha inventário, proprietário e procedimento de atualização.
+
+## 5. Registros e erros
+
+Registre autenticações, falhas, mudanças de credenciais e operações relevantes com identificadores que permitam correlação. Nunca registre o valor de um token ou senha. Mensagens de erro devem permitir diagnóstico sem revelar conteúdo interno, segredos ou existência de recursos que o solicitante não pode acessar.
+
+## 6. Síntese e aplicação
+
+Uma integração fictícia consulta pedidos, mas não os altera. Defina escopos, autorização por pedido, armazenamento do segredo, expiração, eventos de auditoria e resposta a exposição. Confirme com testes que tentativas de alteração e acesso a pedidos não autorizados são recusadas.

@@ -1,19 +1,33 @@
 # Autenticação Multifator
 
-## 1. O que é MFA
+## 1. O que significa multifator
 
-Autenticação multifator exige evidências de categorias diferentes: algo que a pessoa sabe, possui ou é. Assim, o roubo de uma senha isolada não basta para acessar uma conta. MFA é uma das medidas mais eficazes contra tomada de contas.
+Autenticação multifator (MFA) exige evidências de categorias diferentes: algo que a pessoa sabe, possui ou é. Duas senhas continuam sendo dois elementos da mesma categoria e não constituem MFA. A intenção é impedir que o roubo de um único fator, geralmente a senha, seja suficiente para acessar a conta.
 
-## 2. Métodos e resistência a phishing
+MFA reduz risco de tomada de contas, mas não elimina phishing, roubo de sessão, abuso de recuperação ou aprovação descuidada. Proteja também as sessões, os dispositivos e os mecanismos de recuperação.
 
-Aplicativos autenticadores e confirmações no dispositivo adicionam uma camada de proteção. Chaves de segurança baseadas em padrões modernos oferecem boa resistência a páginas falsas porque validam o domínio do serviço. Códigos por SMS são melhores que senha sozinha, mas podem ser alvo de fraude de telefonia e interceptação.
+## 2. Métodos e diferenças
 
-Não aprove uma solicitação de MFA que você não iniciou. Uma sequência de notificações inesperadas pode indicar que alguém já conhece sua senha e está tentando induzir a aprovação por cansaço.
+Aplicativos autenticadores geram códigos temporários; notificações de aprovação podem ser convenientes, mas solicitações repetidas podem pressionar a pessoa a aprovar uma tentativa que não iniciou. Códigos enviados por SMS são preferíveis a uma senha sozinha, porém podem ser expostos por fraude de telefonia, interceptação ou acesso ao aparelho.
 
-## 3. Recuperação de conta
+Chaves de segurança e passkeys baseadas em padrões resistentes a phishing vinculam a autenticação ao domínio correto do serviço. Isso dificulta que uma página falsa reutilize a prova de autenticação em outro site. A experiência e as opções disponíveis dependem dos serviços e dispositivos adotados.
 
-O processo de recuperação pode se tornar o elo fraco. Códigos de recuperação devem ser guardados com segurança; mudanças de e-mail, telefone ou método de MFA precisam ser notificadas e, para contas críticas, exigir verificação adicional.
+## 3. Implantação e prioridades
 
-## 4. Implantação prática
+Priorize contas de e-mail, identidade central, gerenciadores de senha, nuvem, repositórios de código, acesso remoto e contas administrativas. A proteção do e-mail é particularmente importante porque ele pode permitir redefinição de outras credenciais.
 
-Priorize e-mail, gerenciadores de senha, serviços de nuvem, repositórios de código, VPNs e contas administrativas. Acompanhe cobertura de MFA e trate exceções com prazo e aprovação formal.
+Defina método recomendado, alternativas para acessibilidade e contingência para perda de dispositivo. Meça cobertura e exceções, mas não considere apenas a ativação: verifique se administradores, contas de serviço e processos críticos também estão protegidos.
+
+## 4. Recuperação e fatores alternativos
+
+Recuperação pode se tornar o caminho mais fraco. Códigos de recuperação devem ser protegidos; mudanças de telefone, e-mail ou método de MFA devem exigir verificação apropriada e gerar notificações. Planeje como recuperar contas sem permitir que uma pessoa de suporte remova fatores apenas com uma solicitação não verificada.
+
+Para contas críticas, use procedimento documentado, aprovação adequada e registro das ações. Teste o processo para confirmar que é possível recuperar acesso sem abrir um atalho fácil para fraude.
+
+## 5. Resposta a solicitações inesperadas
+
+Nunca aprove uma notificação que não iniciou. Interrompa a interação e reporte pelo canal oficial. Se houver múltiplas solicitações, trate como possível comprometimento: informe a equipe responsável, altere a senha por um canal confiável e revise sessões ativas conforme o procedimento.
+
+## 6. Síntese e aplicação
+
+Compare SMS, código de aplicativo e chave de segurança em resistência a phishing, dependência de dispositivo e recuperação. Para uma conta importante, escolha uma combinação adequada e descreva como o acesso será revogado ou recuperado com segurança.
