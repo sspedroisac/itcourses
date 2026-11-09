@@ -12,10 +12,10 @@ export default function StepCard({
   stepWrapperClassName,
 }: StepCardProps) {
   return (
-    <div className="border border-olive-200 p-4 rounded flex flex-col gap-4 shadow-2xs">
+    <div className="flex flex-col gap-4 rounded border border-border bg-surface p-4 shadow-2xs">
       <div
         className={twMerge(
-          `bg-blue-100 w-12 h-12 rounded flex items-center justify-center text-primary`,
+          `w-12 h-12 rounded bg-surface-muted flex items-center justify-center text-primary`,
           iconWrapperClassName,
         )}
       >
@@ -26,7 +26,7 @@ export default function StepCard({
           {step && (
             <span
               className={twMerge(
-                `font-bold text-lg bg-primary text-white w-6 h-6 flex items-center justify-center rounded-full`,
+                `font-bold text-lg bg-button text-white w-6 h-6 flex items-center justify-center rounded-full`,
                 stepWrapperClassName,
               )}
             >

@@ -21,7 +21,7 @@ export default function CourseCard({
   progressColor = "bg-primary",
   icon,
   iconColor = "text-primary",
-  iconBgColor = "bg-blue-100",
+  iconBgColor = "bg-surface-muted",
   slug,
 }: CourseCardProps) {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -46,12 +46,12 @@ export default function CourseCard({
         params: { slug, class: "index" },
       }}
     >
-      <div className="border border-olive-200 p-4 rounded flex flex-col gap-4 shadow-2xs">
+      <div className="flex flex-col gap-4 rounded border border-border bg-surface p-4 shadow-2xs">
         <div className="flex items-center justify-between">
           <div className="flex gap-2">
             <div
               className={twMerge(
-                `bg-blue-100 w-12 h-12 rounded flex items-center justify-center`,
+                `w-12 h-12 rounded bg-surface-muted flex items-center justify-center`,
                 iconColor,
                 iconBgColor,
               )}
@@ -61,14 +61,14 @@ export default function CourseCard({
             <div className="flex flex-col gap-1 justify-center">
               <p className="font-bold text-olive">{title}</p>
               {totalClassesCount && (
-                <span className="text-olive opacity-70">
+                <span className="text-muted-foreground">
                   {totalClassesCount} Classes
                 </span>
               )}
             </div>
           </div>
           <button
-            className={`text-olive opacity-70 cursor-pointer ${isFavorite ? "text-yellow-500" : ""}`}
+            className={`cursor-pointer text-muted-foreground ${isFavorite ? "text-yellow-500" : ""}`}
             onClick={handleFavoriteClick}
           >
             <Star fill={isFavorite ? "currentColor" : "none"} />

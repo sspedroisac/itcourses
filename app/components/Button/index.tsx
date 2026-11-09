@@ -14,7 +14,7 @@ export default function Button({
   let buttonClass =
     "cursor-pointer flex items-center justify-center gap-2 flex-row hover:opacity-85 rounded py-2 px-4 font-bold";
 
-  buttonClass += " bg-primary text-white";
+  buttonClass += " bg-button text-white";
 
   if (type === "outlined") {
     buttonClass += " bg-transparent border border-primary text-primary";

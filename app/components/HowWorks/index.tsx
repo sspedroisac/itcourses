@@ -26,8 +26,8 @@ export default async function HowWorks({ locale }: { locale: string }) {
       title: t("steps.step2.title"),
       icon: <BookOpen size={24} />,
       description: t("steps.step2.description"),
-      iconWrapperClassName: "bg-green-100 text-green-600",
-      stepWrapperClassName: "bg-green-600 text-white",
+      iconWrapperClassName: "bg-surface-muted text-primary",
+      stepWrapperClassName: "bg-button text-white",
     },
   ];
 

@@ -15,10 +15,10 @@ export default function Dropdown({
   const [isOpen, setIsOpen] = useState(false);
 
   const wrapperClass =
-    "relative bg-transparent border border-gray-300 rounded px-2 py-1";
+    "relative rounded border border-border bg-transparent px-2 py-1";
 
   const contentWrapperClass =
-    "absolute top-full left-0 w-fit bg-white border border-gray-300 rounded-md shadow-lg z-10 mt-4 px-2 py-1";
+    "absolute top-full left-0 z-10 mt-4 w-fit rounded-md border border-border bg-surface px-2 py-1 text-foreground shadow-lg";
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
