@@ -1,0 +1,78 @@
+{
+  "title": "Segurança da Informação",
+  "slug": "seguranca-da-informacao",
+  "modules": [
+    {
+      "title": "Fundamentos de Segurança da Informação",
+      "classes": [
+        { "title": "Introdução à Segurança da Informação", "slug": "introducao-a-seguranca-da-informacao" },
+        { "title": "Confidencialidade, Integridade e Disponibilidade", "slug": "tríade-cia" },
+        { "title": "Ativos, Ameaças e Vulnerabilidades", "slug": "ativos-ameacas-e-vulnerabilidades" },
+        { "title": "Gestão de Riscos", "slug": "gestao-de-riscos" }
+      ]
+    },
+    {
+      "title": "Controles e Proteção de Dados",
+      "classes": [
+        { "title": "Controles de Segurança", "slug": "controles-de-seguranca" },
+        { "title": "Classificação e Ciclo de Vida dos Dados", "slug": "classificacao-e-ciclo-de-vida-dos-dados" },
+        { "title": "Criptografia", "slug": "criptografia" },
+        { "title": "Backups e Recuperação", "slug": "backups-e-recuperacao" }
+      ]
+    },
+    {
+      "title": "Identidade e Controle de Acesso",
+      "classes": [
+        { "title": "Identidade, Autenticação e Autorização", "slug": "identidade-autenticacao-e-autorizacao" },
+        { "title": "Senhas e Gerenciadores de Senhas", "slug": "senhas-e-gerenciadores-de-senhas" },
+        { "title": "Autenticação Multifator", "slug": "autenticacao-multifator" },
+        { "title": "Princípio do Menor Privilégio", "slug": "principio-do-menor-privilegio" }
+      ]
+    },
+    {
+      "title": "Segurança de Redes e Infraestrutura",
+      "classes": [
+        { "title": "Fundamentos de Segurança de Redes", "slug": "fundamentos-de-seguranca-de-redes" },
+        { "title": "Firewalls e Segmentação de Rede", "slug": "firewalls-e-segmentacao-de-rede" },
+        { "title": "Serviços Expostos e Atualizações", "slug": "servicos-expostos-e-atualizacoes" },
+        { "title": "Segurança em Nuvem", "slug": "seguranca-em-nuvem" }
+      ]
+    },
+    {
+      "title": "Segurança de Aplicações",
+      "classes": [
+        { "title": "Desenvolvimento Seguro", "slug": "desenvolvimento-seguro" },
+        { "title": "Validação de Entradas", "slug": "validacao-de-entradas" },
+        { "title": "Principais Vulnerabilidades em Aplicações Web", "slug": "vulnerabilidades-em-aplicacoes-web" },
+        { "title": "Segurança de APIs e Segredos", "slug": "seguranca-de-apis-e-segredos" }
+      ]
+    },
+    {
+      "title": "Operação, Incidentes e Governança",
+      "classes": [
+        { "title": "Logs, Monitoramento e Auditoria", "slug": "logs-monitoramento-e-auditoria" },
+        { "title": "Resposta a Incidentes", "slug": "resposta-a-incidentes" },
+        { "title": "Engenharia Social e Conscientização", "slug": "engenharia-social-e-conscientizacao" },
+        { "title": "Políticas, Conformidade e Melhoria Contínua", "slug": "politicas-conformidade-e-melhoria-continua" }
+      ]
+    },
+    {
+      "title": "Segurança no Dia a Dia",
+      "classes": [
+        { "title": "Segurança de Endpoints", "slug": "seguranca-de-endpoints" },
+        { "title": "E-mail e Navegação Segura", "slug": "email-e-navegacao-segura" },
+        { "title": "Trabalho Remoto e Dispositivos Móveis", "slug": "trabalho-remoto-e-dispositivos-moveis" },
+        { "title": "Terceiros e Cadeia de Suprimentos", "slug": "terceiros-e-cadeia-de-suprimentos" }
+      ]
+    },
+    {
+      "title": "Resiliência e Avaliação de Segurança",
+      "classes": [
+        { "title": "Continuidade de Negócios e Recuperação de Desastres", "slug": "continuidade-de-negocios-e-recuperacao-de-desastres" },
+        { "title": "Avaliação de Vulnerabilidades", "slug": "avaliacao-de-vulnerabilidades" },
+        { "title": "Testes de Segurança", "slug": "testes-de-seguranca" },
+        { "title": "Métricas e Indicadores de Segurança", "slug": "metricas-e-indicadores-de-seguranca" }
+      ]
+    }
+  ]
+}
