@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 import { CourseModulesCheckListProps } from "./types";
 import { toogleProgress, getProgress } from "../../lib/progress";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 // === Component ===
 export default function CourseModulesCheckList({
@@ -24,6 +25,7 @@ export default function CourseModulesCheckList({
 }: CourseModulesCheckListProps) {
   const [progress, setProgress] = useState<string[]>([]);
   const t = useTranslations("dictionary");
+  const { class: slugClass } = useParams<{ class?: string }>();
 
   const handleCheckBoxChange = (classSlug: string) => {
     toogleProgress(slug, classSlug);
@@ -47,6 +49,11 @@ export default function CourseModulesCheckList({
                 onChange={() => handleCheckBoxChange(classItem.slug)}
               />
               <Link
+                className={
+                  slugClass === classItem.slug
+                    ? "text-primary font-semibold"
+                    : ""
+                }
                 href={{
                   pathname: "/courses/[slug]/[class]",
                   params: { slug, class: classItem.slug },
