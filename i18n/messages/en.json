@@ -38,6 +38,9 @@
     "all": "All",
     "notFavorites": "Not Favorites"
   },
+  "classButtons": {
+    "edit": "Edit"
+  },
   "dictionary": {
     "modules": "Modules"
   }
