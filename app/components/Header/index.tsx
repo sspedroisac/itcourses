@@ -3,6 +3,7 @@ import Logo from "../Logo";
 import Button from "../Button";
 import { Link } from "@/i18n/navigation";
 import LanguageSwitcher from "../LanguageSwitcher";
+import ThemeToggle from "../ThemeToggle";
 
 // === Utils ===
 import { getTranslations } from "next-intl/server";
@@ -18,11 +19,12 @@ export default async function Header() {
           <Logo />
         </Link>
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           <LanguageSwitcher />
           <Link href="/courses">
             <Button
               label={t("cta")}
-              className="bg-olive-900 hover:opacity-85 hidden md:block"
+              className="bg-button hover:opacity-85 hidden md:block"
             />
           </Link>
         </div>

@@ -24,14 +24,14 @@ export default function Collapse({
   };
 
   return (
-    <div className={twMerge("border border-gray-200 rounded p-4", className)}>
+    <div className={twMerge("rounded border border-border bg-surface p-4", className)}>
       <div className="flex items-center justify-between">
         <Button
           label={title}
           icon={<ChevronDown />}
           type="text"
           className={twMerge(
-            "p-0 text-gray-500 hover:text-gray-700 flex justify-between w-full flex-row-reverse text-left",
+            "flex w-full flex-row-reverse justify-between p-0 text-left text-muted-foreground hover:text-foreground",
             triggerClassName,
           )}
           onClick={handleToggle}

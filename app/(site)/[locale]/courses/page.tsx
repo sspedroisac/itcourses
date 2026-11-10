@@ -37,7 +37,7 @@ export default async function ExplorePage({
                 <h2 className="font-bold text-olive-900 text-2xl">
                   {t("title")}
                 </h2>
-                <p className="mt-2 text-gray-500">{t("description")}</p>
+                <p className="mt-2 text-muted-foreground">{t("description")}</p>
               </div>
 
               <div className="w-full mt-6 md:hidden">
@@ -49,7 +49,7 @@ export default async function ExplorePage({
               </div>
             </div>
 
-            <div className="w-1/4 border-l border-gray-200 pl-8 hidden md:block">
+            <div className="hidden w-1/4 border-l border-border pl-8 md:block">
               <CoursesFilter />
             </div>
           </div>

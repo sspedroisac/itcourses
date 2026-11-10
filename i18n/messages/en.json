@@ -1,6 +1,7 @@
 {
   "Header": {
-    "cta": "Explore Courses"
+    "cta": "Explore Courses",
+    "themeToggle": "Toggle light or dark theme"
   },
   "bannerHero": {
     "title": "Learn, Build, and Grow with IT Courses",

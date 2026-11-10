@@ -15,9 +15,9 @@ export default async function CourseContent({
   const courseClass = await getClass(slug, slugClass, locale);
 
   return (
-    <div className="border-b border-r border-gray-200 rounded pr-1 pb-1 shadow-2xs">
-      <div className="border-b border-r border-gray-200 rounded pr-1 pb-1">
-        <div className="border border-gray-200 rounded p-4">
+    <div className="rounded border-b border-r border-border bg-surface pr-1 pb-1 shadow-2xs">
+      <div className="rounded border-b border-r border-border pr-1 pb-1">
+        <div className="rounded border border-border p-4">
           <article className="prose max-w-none">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {courseClass.content}

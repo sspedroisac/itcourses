@@ -21,7 +21,7 @@ export default function CoursesFilter({ className }: CoursesFilterProps) {
   const router = useRouter();
   const t = useTranslations("coursesFilter");
 
-  const bottomBorderClass = "border-b border-gray-200 pb-12";
+  const bottomBorderClass = "border-b border-border pb-12";
 
   const filterSections = [
     {

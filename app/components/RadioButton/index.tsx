@@ -21,7 +21,7 @@ export default function RadioButton({
       className="flex items-center gap-4 cursor-pointer"
       onClick={handleChange}
     >
-      <div className="flex items-center justify-center w-5 h-5 border border-gray-400 rounded-full">
+      <div className="flex h-5 w-5 items-center justify-center rounded-full border border-border">
         {checked && <div className="w-3 h-3 bg-primary rounded-full" />}
       </div>
       <span className={className}>{label}</span>
