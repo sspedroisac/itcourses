@@ -29,7 +29,7 @@ export default function Button({
       disabled={disabled}
     >
       {icon}
-      <span>{label}</span>
+      {label && <span>{label}</span>}
     </button>
   );
 }

@@ -59,6 +59,24 @@ export async function getCourse(slug: string, lang: string) {
   };
 }
 
+export async function getNextClassSlug(
+  slug: string,
+  slugClass: string,
+  lang: string,
+) {
+  const course = await getCourse(slug, lang);
+  const classes = course.modules.flatMap((module: any) => module.classes);
+  const currentIndex = classes.findIndex(
+    (courseClass: any) => courseClass.slug === slugClass,
+  );
+
+  if (currentIndex === -1) {
+    return slugClass === "index" ? (classes[0]?.slug ?? null) : null;
+  }
+
+  return classes[currentIndex + 1]?.slug ?? null;
+}
+
 export async function getClass(slug: string, slugClass: string, lang: string) {
   const file = path.join(
     process.cwd(),

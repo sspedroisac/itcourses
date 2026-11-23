@@ -39,7 +39,8 @@
     "notFavorites": "Não Favoritos"
   },
   "classButtons": {
-    "edit": "Editar"
+    "edit": "Editar",
+    "nextClass": "Próxima Aula"
   },
   "dictionary": {
     "modules": "Módulos"
