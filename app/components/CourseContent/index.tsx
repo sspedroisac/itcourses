@@ -1,7 +1,6 @@
 // === Components ===
 import ReactMarkdown from "react-markdown";
 import ClassButtons from "../ClassButtons";
-import NextClassButton from "../NextClassButton";
 
 // === utils ===
 import { CourseContentProps } from "./types";
@@ -22,10 +21,11 @@ export default async function CourseContent({
       <div className="rounded border-b border-r border-border pr-1 pb-1">
         <div className="rounded border border-border p-4">
           <div className="mb-8 border-b border-border pb-8">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <ClassButtons slug={slug} slugClass={slugClass} />
-              <NextClassButton slug={slug} nextClassSlug={nextClassSlug} />
-            </div>
+            <ClassButtons
+              slug={slug}
+              slugClass={slugClass}
+              slugNextClass={nextClassSlug}
+            />
           </div>
           <article className="prose max-w-none">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -33,10 +33,11 @@ export default async function CourseContent({
             </ReactMarkdown>
           </article>
           <div className="mt-8 border-t border-border pt-8">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <ClassButtons slug={slug} slugClass={slugClass} />
-              <NextClassButton slug={slug} nextClassSlug={nextClassSlug} />
-            </div>
+            <ClassButtons
+              slug={slug}
+              slugClass={slugClass}
+              slugNextClass={nextClassSlug}
+            />
           </div>
         </div>
       </div>
