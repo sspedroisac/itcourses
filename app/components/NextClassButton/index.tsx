@@ -32,7 +32,6 @@ export default function NextClassButton({
     >
       <Button
         icon={<ArrowRight size={16} />}
-        label={""}
         type="outlined"
         className={buttonsClass}
       />

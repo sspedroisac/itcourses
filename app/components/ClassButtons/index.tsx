@@ -3,6 +3,7 @@
 // === Components ===
 import Button from "../Button";
 import { Edit } from "lucide-react";
+import NextClassButton from "../NextClassButton";
 
 // === Utils ===
 import siteConfig from "../../config/site";
@@ -11,7 +12,11 @@ import { ClassButtonsProps } from "./types";
 import { useTranslations } from "next-intl";
 
 // === Component ===
-const ClassButtons = ({ slug, slugClass }: ClassButtonsProps) => {
+const ClassButtons = ({
+  slug,
+  slugClass,
+  slugNextClass,
+}: ClassButtonsProps) => {
   const currentLocale = useLocale();
   const t = useTranslations("classButtons");
   const buttonsClass =
@@ -25,13 +30,19 @@ const ClassButtons = ({ slug, slugClass }: ClassButtonsProps) => {
   };
 
   return (
-    <div className="flex gap-2">
-      <Button
-        icon={<Edit size={16} />}
-        type="text"
-        className={buttonsClass}
-        onClick={handleEdit}
-      />
+    <div className="flex flex-wrap items-center justify-between gap-4">
+      <div className="flex gap-2">
+        <Button
+          icon={<Edit size={16} />}
+          type="text"
+          className={buttonsClass}
+          onClick={handleEdit}
+        />
+      </div>
+
+      <div className="flex gap-2">
+        <NextClassButton slug={slug} nextClassSlug={slugNextClass} />
+      </div>
     </div>
   );
 };
