@@ -29,7 +29,6 @@ const ClassButtons = ({ slug, slugClass }: ClassButtonsProps) => {
       <Button
         icon={<Edit size={16} />}
         type="text"
-        label={t("edit")}
         className={buttonsClass}
         onClick={handleEdit}
       />

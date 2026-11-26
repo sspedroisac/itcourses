@@ -1,5 +1,5 @@
 export type ButtonProps = {
-  label: string;
+  label?: string;
   onClick?: () => void;
   disabled?: boolean;
   type?: "filled" | "outlined" | "text";

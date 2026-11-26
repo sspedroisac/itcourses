@@ -1,10 +1,11 @@
 // === Components ===
 import ReactMarkdown from "react-markdown";
 import ClassButtons from "../ClassButtons";
+import NextClassButton from "../NextClassButton";
 
 // === utils ===
 import { CourseContentProps } from "./types";
-import { getClass } from "../../lib/courses";
+import { getClass, getNextClassSlug } from "../../lib/courses";
 import remarkGfm from "remark-gfm";
 
 // === Component ===
@@ -14,13 +15,17 @@ export default async function CourseContent({
   locale,
 }: CourseContentProps) {
   const courseClass = await getClass(slug, slugClass, locale);
+  const nextClassSlug = await getNextClassSlug(slug, slugClass, locale);
 
   return (
     <div className="rounded border-b border-r border-border bg-surface pr-1 pb-1 shadow-2xs">
       <div className="rounded border-b border-r border-border pr-1 pb-1">
         <div className="rounded border border-border p-4">
           <div className="mb-8 border-b border-border pb-8">
-            <ClassButtons slug={slug} slugClass={slugClass} />
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <ClassButtons slug={slug} slugClass={slugClass} />
+              <NextClassButton slug={slug} nextClassSlug={nextClassSlug} />
+            </div>
           </div>
           <article className="prose max-w-none">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -28,7 +33,10 @@ export default async function CourseContent({
             </ReactMarkdown>
           </article>
           <div className="mt-8 border-t border-border pt-8">
-            <ClassButtons slug={slug} slugClass={slugClass} />
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <ClassButtons slug={slug} slugClass={slugClass} />
+              <NextClassButton slug={slug} nextClassSlug={nextClassSlug} />
+            </div>
           </div>
         </div>
       </div>
