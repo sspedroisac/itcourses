@@ -77,6 +77,22 @@ export async function getNextClassSlug(
   return classes[currentIndex + 1]?.slug ?? null;
 }
 
+export async function getPrevClassSlug(
+  slug: string,
+  slugClass: string,
+  lang: string,
+) {
+  const course = await getCourse(slug, lang);
+  const classes = course.modules.flatMap((module: any) => module.classes);
+  const currentIndex = classes.findIndex(
+    (courseClass: any) => courseClass.slug === slugClass,
+  );
+
+  if (currentIndex <= 0) return null;
+
+  return classes[currentIndex - 1]?.slug ?? null;
+}
+
 export async function getClass(slug: string, slugClass: string, lang: string) {
   const file = path.join(
     process.cwd(),

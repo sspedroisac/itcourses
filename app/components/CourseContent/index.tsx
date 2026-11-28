@@ -4,7 +4,11 @@ import ClassButtons from "../ClassButtons";
 
 // === utils ===
 import { CourseContentProps } from "./types";
-import { getClass, getNextClassSlug } from "../../lib/courses";
+import {
+  getClass,
+  getNextClassSlug,
+  getPrevClassSlug,
+} from "../../lib/courses";
 import remarkGfm from "remark-gfm";
 
 // === Component ===
@@ -15,6 +19,7 @@ export default async function CourseContent({
 }: CourseContentProps) {
   const courseClass = await getClass(slug, slugClass, locale);
   const nextClassSlug = await getNextClassSlug(slug, slugClass, locale);
+  const prevClassSlug = await getPrevClassSlug(slug, slugClass, locale);
 
   return (
     <div className="rounded border-b border-r border-border bg-surface pr-1 pb-1 shadow-2xs">
@@ -24,6 +29,7 @@ export default async function CourseContent({
             <ClassButtons
               slug={slug}
               slugClass={slugClass}
+              slugPrevClass={prevClassSlug}
               slugNextClass={nextClassSlug}
             />
           </div>
@@ -36,6 +42,7 @@ export default async function CourseContent({
             <ClassButtons
               slug={slug}
               slugClass={slugClass}
+              slugPrevClass={prevClassSlug}
               slugNextClass={nextClassSlug}
             />
           </div>

@@ -4,6 +4,7 @@
 import Button from "../Button";
 import { Edit } from "lucide-react";
 import NextClassButton from "../NextClassButton";
+import PrevClassButton from "../PrevClassButton";
 
 // === Utils ===
 import siteConfig from "../../config/site";
@@ -15,6 +16,7 @@ import { useTranslations } from "next-intl";
 const ClassButtons = ({
   slug,
   slugClass,
+  slugPrevClass,
   slugNextClass,
 }: ClassButtonsProps) => {
   const currentLocale = useLocale();
@@ -41,6 +43,7 @@ const ClassButtons = ({
       </div>
 
       <div className="flex gap-2">
+        <PrevClassButton slug={slug} prevClassSlug={slugPrevClass} />
         <NextClassButton slug={slug} nextClassSlug={slugNextClass} />
       </div>
     </div>

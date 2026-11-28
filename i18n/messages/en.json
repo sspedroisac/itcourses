@@ -40,6 +40,7 @@
   },
   "classButtons": {
     "edit": "Edit",
+    "prevClass": "Previous Class",
     "nextClass": "Next Class"
   },
   "dictionary": {
